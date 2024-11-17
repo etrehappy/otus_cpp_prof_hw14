@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Game Project: Файл C:/Users/etreh/Documents/Programming/Otus/C++_Developer/Professional/Project/otus_cpp_prof_hw14/source/client/controller.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Game Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('controller_8cpp.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#typedef-members">Определения типов</a>  </div>
+  <div class="headertitle"><div class="title">Файл controller.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="controller_8h_source.html">controller.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="logger__c_8h_source.html">logger_c.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для controller.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="controller_8cpp__incl.png" border="0" usemap="#a_c_1_2_users_2etreh_2_documents_2_programming_2_otus_2_c_09_09___developer_2_professional_2_project_2otus__cpp__prof__hw14_2source_2client_2controller_8cpp" alt=""/></div>
+<map name="a_c_1_2_users_2etreh_2_documents_2_programming_2_otus_2_c_09_09___developer_2_professional_2_project_2otus__cpp__prof__hw14_2source_2client_2controller_8cpp" id="a_c_1_2_users_2etreh_2_documents_2_programming_2_otus_2_c_09_09___developer_2_professional_2_project_2otus__cpp__prof__hw14_2source_2client_2controller_8cpp">
+<area shape="rect" title=" " alt="" coords="1045,5,1294,80"/>
+<area shape="rect" href="controller_8h.html" title=" " alt="" coords="828,128,913,155"/>
+<area shape="poly" title=" " alt="" coords="1056,83,925,125,923,120,1055,78"/>
+<area shape="rect" href="logger__c_8h.html" title=" " alt="" coords="1983,352,2065,379"/>
+<area shape="poly" title=" " alt="" coords="1268,78,1977,344,1975,349,1266,83"/>
+<area shape="rect" title=" " alt="" coords="672,592,725,619"/>
+<area shape="poly" title=" " alt="" coords="827,145,661,149,553,156,442,168,339,186,253,212,220,228,194,246,179,267,173,290,173,449,177,466,188,483,206,498,230,512,292,536,367,556,448,572,528,584,657,598,656,603,527,589,447,577,366,561,290,541,228,516,203,502,184,486,172,469,168,450,168,289,174,264,191,242,217,223,251,207,338,181,441,163,552,151,660,144,827,140"/>
+<area shape="rect" title=" " alt="" coords="208,352,277,379"/>
+<area shape="poly" title=" " alt="" coords="828,149,734,160,607,182,538,200,468,221,399,248,333,280,294,309,263,342,259,338,290,305,331,275,396,243,466,216,537,194,606,177,733,154,827,143"/>
+<area shape="rect" href="client_2db__handler_8h.html" title=" " alt="" coords="779,277,874,304"/>
+<area shape="poly" title=" " alt="" coords="869,156,855,203,837,263,832,262,849,202,864,154"/>
+<area shape="rect" href="game__logic_8h.html" title=" " alt="" coords="864,203,962,229"/>
+<area shape="poly" title=" " alt="" coords="880,154,901,188,896,191,876,157"/>
+<area shape="rect" href="i__inputdata_8h.html" title=" " alt="" coords="38,277,133,304"/>
+<area shape="poly" title=" " alt="" coords="827,147,457,166,262,183,193,194,153,205,136,217,122,232,100,265,95,262,117,229,133,213,151,200,191,189,262,178,457,161,827,142"/>
+<area shape="rect" href="view_8h.html" title=" " alt="" coords="1102,277,1160,304"/>
+<area shape="poly" title=" " alt="" coords="894,153,1097,267,1094,272,892,157"/>
+<area shape="rect" href="client_2network__handler_8h.html" title=" " alt="" coords="1200,203,1328,229"/>
+<area shape="poly" title=" " alt="" coords="914,148,1186,198,1185,203,913,153"/>
+<area shape="poly" title=" " alt="" coords="779,301,293,361,292,355,778,295"/>
+<area shape="rect" title=" " alt="" coords="975,352,1033,379"/>
+<area shape="poly" title=" " alt="" coords="859,302,962,344,960,349,857,307"/>
+<area shape="rect" title=" " alt="" coords="639,352,804,379"/>
+<area shape="poly" title=" " alt="" coords="810,307,754,345,751,341,807,302"/>
+<area shape="rect" href="game__elements_8h.html" title=" " alt="" coords="827,352,952,379"/>
+<area shape="poly" title=" " alt="" coords="840,303,871,338,867,342,836,306"/>
+<area shape="rect" href="avatar_8h.html" title=" " alt="" coords="883,517,952,544"/>
+<area shape="poly" title=" " alt="" coords="894,378,915,502,910,503,889,379"/>
+<area shape="rect" href="location_8h.html" title=" " alt="" coords="805,435,883,461"/>
+<area shape="poly" title=" " alt="" coords="885,380,861,423,856,420,880,378"/>
+<area shape="rect" href="npc_8h.html" title=" " alt="" coords="672,517,725,544"/>
+<area shape="poly" title=" " alt="" coords="867,382,832,402,795,429,753,469,720,507,716,504,749,465,792,425,829,398,864,377"/>
+<area shape="rect" href="settings_8h.html" title=" " alt="" coords="1202,435,1280,461"/>
+<area shape="poly" title=" " alt="" coords="945,377,1187,432,1186,437,944,382"/>
+<area shape="poly" title=" " alt="" coords="884,546,741,593,739,588,882,541"/>
+<area shape="poly" title=" " alt="" coords="847,462,842,502,834,525,822,546,804,563,784,577,741,596,739,591,781,572,801,559,818,542,830,523,837,501,841,462"/>
+<area shape="poly" title=" " alt="" coords="857,460,898,504,894,508,853,464"/>
+<area shape="rect" title=" " alt="" coords="1006,517,1052,544"/>
+<area shape="poly" title=" " alt="" coords="874,459,993,511,991,516,872,464"/>
+<area shape="rect" title=" " alt="" coords="750,517,807,544"/>
+<area shape="poly" title=" " alt="" coords="836,464,800,507,796,504,832,460"/>
+<area shape="poly" title=" " alt="" coords="823,464,736,512,733,507,820,459"/>
+<area shape="poly" title=" " alt="" coords="701,545,701,576,696,576,696,545"/>
+<area shape="rect" title=" " alt="" coords="1957,517,2038,544"/>
+<area shape="poly" title=" " alt="" coords="1270,459,1293,467,1383,485,1477,500,1660,518,1822,526,1941,527,1941,533,1822,531,1660,523,1476,505,1382,491,1291,472,1268,464"/>
+<area shape="poly" title=" " alt="" coords="864,219,774,221,656,229,525,248,459,262,396,280,328,310,273,345,270,341,326,306,394,275,458,257,524,242,656,224,774,216,864,214"/>
+<area shape="poly" title=" " alt="" coords="900,232,855,269,851,265,897,228"/>
+<area shape="poly" title=" " alt="" coords="923,228,991,337,986,340,919,231"/>
+<area shape="poly" title=" " alt="" coords="914,230,896,337,891,336,909,229"/>
+<area shape="rect" title=" " alt="" coords="1235,277,1293,304"/>
+<area shape="poly" title=" " alt="" coords="963,224,1217,275,1221,276,1220,281,1215,280,962,229"/>
+<area shape="poly" title=" " alt="" coords="864,224,149,287,148,281,864,219"/>
+<area shape="rect" href="menus_8h.html" title=" " alt="" coords="1056,352,1128,379"/>
+<area shape="poly" title=" " alt="" coords="930,228,1067,340,1063,344,927,232"/>
+<area shape="rect" title=" " alt="" coords="1434,352,1544,379"/>
+<area shape="poly" title=" " alt="" coords="964,222,1062,242,1173,275,1199,288,1225,302,1310,324,1419,348,1418,353,1309,329,1223,306,1197,293,1171,280,1060,248,962,228"/>
+<area shape="rect" href="parser_8h.html" title=" " alt="" coords="407,277,476,304"/>
+<area shape="poly" title=" " alt="" coords="864,228,491,284,490,279,863,222"/>
+<area shape="poly" title=" " alt="" coords="952,227,1087,272,1086,277,950,232"/>
+<area shape="poly" title=" " alt="" coords="90,304,119,436,138,506,154,542,180,553,230,563,373,580,656,599,656,605,373,586,229,569,179,558,150,546,133,507,114,437,85,305"/>
+<area shape="rect" title=" " alt="" coords="5,352,83,379"/>
+<area shape="poly" title=" " alt="" coords="80,306,61,340,56,337,76,303"/>
+<area shape="poly" title=" " alt="" coords="1093,380,1085,421,1069,470,1049,506,1045,503,1064,468,1080,419,1088,379"/>
+<area shape="rect" title=" " alt="" coords="1004,435,1054,461"/>
+<area shape="poly" title=" " alt="" coords="1084,381,1050,424,1046,421,1080,378"/>
+<area shape="rect" title=" " alt="" coords="1304,435,1365,461"/>
+<area shape="poly" title=" " alt="" coords="1129,373,1205,395,1293,424,1297,426,1295,431,1291,429,1204,400,1128,378"/>
+<area shape="poly" title=" " alt="" coords="408,306,380,319,355,336,340,356,339,366,342,377,372,421,409,459,451,492,496,521,585,564,658,590,656,595,583,569,493,525,448,497,406,463,368,424,338,380,333,367,335,354,351,332,377,314,406,301"/>
+<area shape="poly" title=" " alt="" coords="408,307,292,349,290,344,406,302"/>
+<area shape="rect" title=" " alt="" coords="352,352,530,379"/>
+<area shape="poly" title=" " alt="" coords="444,305,444,336,439,336,439,305"/>
+<area shape="rect" title=" " alt="" coords="555,352,616,379"/>
+<area shape="poly" title=" " alt="" coords="468,302,548,342,545,347,465,307"/>
+<area shape="poly" title=" " alt="" coords="1137,304,1144,338,1143,379,1132,432,1122,474,1103,510,1066,546,1040,560,1005,571,916,588,820,599,741,605,741,599,820,594,915,583,1004,566,1038,555,1062,542,1098,507,1117,472,1127,430,1137,378,1138,338,1132,305"/>
+<area shape="poly" title=" " alt="" coords="1110,307,1041,346,1038,342,1107,302"/>
+<area shape="poly" title=" " alt="" coords="1102,303,947,350,945,344,1100,298"/>
+<area shape="poly" title=" " alt="" coords="1161,297,1234,319,1268,334,1289,350,1295,370,1291,390,1281,409,1267,426,1263,422,1276,406,1286,388,1290,370,1284,354,1265,338,1232,324,1159,302"/>
+<area shape="poly" title=" " alt="" coords="1126,306,1108,340,1103,337,1122,303"/>
+<area shape="poly" title=" " alt="" coords="1161,297,1179,301,1419,348,1418,353,1178,307,1159,302"/>
+<area shape="rect" title=" " alt="" coords="1203,352,1274,379"/>
+<area shape="poly" title=" " alt="" coords="1151,302,1209,341,1206,345,1148,307"/>
+<area shape="poly" title=" " alt="" coords="1161,294,1224,301,1651,337,1968,358,1967,363,1651,343,1224,307,1160,299"/>
+<area shape="rect" href="texts_8h.html" title=" " alt="" coords="1349,352,1411,379"/>
+<area shape="poly" title=" " alt="" coords="1161,298,1335,348,1333,353,1160,303"/>
+<area shape="poly" title=" " alt="" coords="2065,364,2223,367,2433,376,2536,384,2625,394,2692,408,2715,416,2729,425,2736,436,2739,448,2736,460,2729,471,2715,480,2692,489,2626,502,2537,512,2434,520,2221,529,2053,532,2053,526,2221,523,2434,514,2536,507,2625,497,2691,483,2712,476,2725,467,2731,458,2734,448,2731,438,2725,429,2712,420,2691,413,2624,400,2535,389,2433,382,2223,373,2065,370"/>
+<area shape="rect" title=" " alt="" coords="2485,435,2563,461"/>
+<area shape="poly" title=" " alt="" coords="2065,366,2244,383,2359,400,2474,424,2482,426,2481,432,2473,429,2358,405,2243,388,2065,371"/>
+<area shape="rect" title=" " alt="" coords="2586,435,2715,461"/>
+<area shape="poly" title=" " alt="" coords="2065,366,2284,384,2429,401,2575,424,2593,428,2592,433,2574,429,2428,406,2283,390,2065,372"/>
+<area shape="rect" title=" " alt="" coords="1389,435,1523,461"/>
+<area shape="poly" title=" " alt="" coords="1983,373,1789,392,1663,408,1535,429,1517,433,1515,428,1534,424,1662,403,1789,387,1983,367"/>
+<area shape="rect" title=" " alt="" coords="1547,435,1720,461"/>
+<area shape="poly" title=" " alt="" coords="1983,378,1710,434,1709,428,1982,372"/>
+<area shape="rect" title=" " alt="" coords="1744,427,1918,469"/>
+<area shape="poly" title=" " alt="" coords="1995,382,1896,423,1893,418,1993,377"/>
+<area shape="rect" title=" " alt="" coords="1942,427,2106,469"/>
+<area shape="poly" title=" " alt="" coords="2027,379,2027,411,2021,411,2021,379"/>
+<area shape="rect" title=" " alt="" coords="2130,427,2275,469"/>
+<area shape="poly" title=" " alt="" coords="2053,377,2144,417,2142,422,2051,382"/>
+<area shape="rect" title=" " alt="" coords="2299,427,2461,469"/>
+<area shape="poly" title=" " alt="" coords="2066,373,2285,422,2283,428,2065,379"/>
+<area shape="poly" title=" " alt="" coords="1375,380,1351,423,1347,420,1371,378"/>
+<area shape="poly" title=" " alt="" coords="1207,232,1149,251,1091,280,1054,309,1025,341,1021,338,1050,306,1088,275,1147,246,1206,227"/>
+<area shape="poly" title=" " alt="" coords="1267,230,1267,262,1261,262,1261,230"/>
+<area shape="poly" title=" " alt="" coords="1329,227,1384,245,1411,258,1436,275,1463,305,1481,336,1476,339,1459,308,1433,279,1409,263,1382,250,1327,232"/>
+<area shape="rect" title=" " alt="" coords="1316,277,1422,304"/>
+<area shape="poly" title=" " alt="" coords="1284,228,1340,266,1337,270,1281,232"/>
+</map>
+</div>
+</div>
+<p><a href="controller_8cpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
+Определения типов</h2></td></tr>
+<tr class="memitem:abf1da8fbde664a11a2cef30aaa467407" id="r_abf1da8fbde664a11a2cef30aaa467407"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf1da8fbde664a11a2cef30aaa467407">proto_message</a> = ProtoMessage::GameMessage</td></tr>
+<tr class="separator:abf1da8fbde664a11a2cef30aaa467407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5351de698117b0f89eb84f22a897ec8f" id="r_a5351de698117b0f89eb84f22a897ec8f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5351de698117b0f89eb84f22a897ec8f">const_proto_ptr</a> = std::unique_ptr&lt;const <a class="el" href="#abf1da8fbde664a11a2cef30aaa467407">proto_message</a>&gt;</td></tr>
+<tr class="separator:a5351de698117b0f89eb84f22a897ec8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Типы</h2>
+<a id="a5351de698117b0f89eb84f22a897ec8f" name="a5351de698117b0f89eb84f22a897ec8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5351de698117b0f89eb84f22a897ec8f">&#9670;&#160;</a></span>const_proto_ptr</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#a5351de698117b0f89eb84f22a897ec8f">const_proto_ptr</a> = std::unique_ptr&lt;const <a class="el" href="#abf1da8fbde664a11a2cef30aaa467407">proto_message</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="controller_8cpp_source.html">controller.cpp</a> строка <a class="el" href="controller_8cpp_source.html#l00005">5</a></p>
+
+</div>
+</div>
+<a id="abf1da8fbde664a11a2cef30aaa467407" name="abf1da8fbde664a11a2cef30aaa467407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf1da8fbde664a11a2cef30aaa467407">&#9670;&#160;</a></span>proto_message</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="#abf1da8fbde664a11a2cef30aaa467407">proto_message</a> = ProtoMessage::GameMessage</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">См. определение в файле <a class="el" href="controller_8cpp_source.html">controller.cpp</a> строка <a class="el" href="controller_8cpp_source.html#l00004">4</a></p>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_527734ea8503945c8009a537a9a4fd20.html">client</a></li><li class="navelem"><a class="el" href="controller_8cpp.html">controller.cpp</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

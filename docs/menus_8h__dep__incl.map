@@ -1,0 +1,32 @@
+<map id="C:/Users/etreh/Documents/Programming/Otus/C++_Developer/Professional/Project/otus_cpp_prof_hw14/source/client/menus.h" name="C:/Users/etreh/Documents/Programming/Otus/C++_Developer/Professional/Project/otus_cpp_prof_hw14/source/client/menus.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="441,5,672,80"/>
+<area shape="rect" id="Node000002" href="$game__logic_8h.html" title=" " alt="" coords="196,251,443,325"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="481,91,432,130,380,192,341,252,337,249,376,189,428,126,478,86"/>
+<area shape="rect" id="Node000010" href="$menus_8cpp.html" title=" " alt="" coords="695,128,930,203"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="649,85,735,125,733,130,647,89"/>
+<area shape="rect" id="Node000011" href="$view_8h.html" title=" " alt="" coords="441,128,672,203"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="559,96,559,128,554,128,554,96"/>
+<area shape="rect" id="Node000003" href="$controller_8h.html" title=" " alt="" coords="534,381,768,456"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="429,329,557,378,555,383,427,334"/>
+<area shape="rect" id="Node000005" href="$client_2main_8h.html" title=" " alt="" coords="800,520,1030,595"/>
+<area shape="poly" id="edge10_Node000002_Node000005" title=" " alt="" coords="458,314,506,323,585,330,649,331,680,333,711,339,745,351,782,371,822,403,855,442,882,482,901,518,897,521,877,485,851,445,818,407,779,376,742,356,710,344,679,338,649,336,585,336,505,328,457,319"/>
+<area shape="rect" id="Node000007" href="$client__tests_8cpp.html" title=" " alt="" coords="272,512,502,603"/>
+<area shape="poly" id="edge11_Node000002_Node000007" title=" " alt="" coords="361,338,378,372,387,408,392,445,393,512,388,512,386,445,382,409,373,374,356,340"/>
+<area shape="rect" id="Node000008" href="$game__logic_8cpp.html" title=" " alt="" coords="5,512,236,603"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="183,325,150,347,124,375,110,407,104,443,106,479,111,511,105,512,100,479,99,443,105,406,120,372,147,342,180,321"/>
+<area shape="rect" id="Node000009" href="$game__logic_8ipp.html" title=" " alt="" coords="133,373,364,464"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="294,340,275,374,271,371,289,338"/>
+<area shape="rect" id="Node000004" href="$controller_8cpp.html" title=" " alt="" coords="527,520,775,595"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="654,472,654,519,648,519,648,472"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="737,461,846,517,843,522,735,466"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="568,466,475,514,472,509,565,461"/>
+<area shape="rect" id="Node000006" href="$client_2main_8cpp.html" title=" " alt="" coords="800,651,1030,725"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="918,610,918,650,912,650,912,610"/>
+<area shape="poly" id="edge9_Node000009_Node000008" title=" " alt="" coords="198,478,164,513,161,510,194,474"/>
+<area shape="poly" id="edge15_Node000011_Node000002" title=" " alt="" coords="472,213,393,252,390,248,469,208"/>
+<area shape="poly" id="edge14_Node000011_Node000003" title=" " alt="" coords="687,205,733,226,750,238,761,249,771,269,774,287,770,306,762,327,741,358,713,383,710,379,737,354,757,324,765,304,769,287,766,271,757,252,747,242,730,231,685,210"/>
+<area shape="poly" id="edge16_Node000011_Node000005" title=" " alt="" coords="687,203,746,225,786,249,814,279,839,313,875,388,899,460,912,519,907,520,894,462,870,390,834,316,810,282,783,253,744,230,686,208"/>
+<area shape="poly" id="edge18_Node000011_Node000007" title=" " alt="" coords="527,218,508,252,447,393,404,512,399,511,442,391,503,249,522,215"/>
+<area shape="rect" id="Node000012" href="$view_8cpp.html" title=" " alt="" coords="517,251,748,325"/>
+<area shape="poly" id="edge17_Node000011_Node000012" title=" " alt="" coords="590,215,612,249,607,252,585,217"/>
+</map>

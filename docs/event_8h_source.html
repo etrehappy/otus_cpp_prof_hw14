@@ -1,0 +1,540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.11.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Game Project: Исходный файл C:/Users/etreh/Documents/Programming/Otus/C++_Developer/Professional/Project/otus_cpp_prof_hw14/source/server/event.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Game Project
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.11.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск',true);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('event_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">event.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="event_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;messages.pb.h&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="settings_8h.html">settings.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="game__elements_8h.html">game_elements.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">class </span><a class="code hl_class" href="class_event.html">Event</a>;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="event_8h.html#a57aba5d77747e7e24dfc0ddefa91629b">   11</a></span><span class="keyword">using </span><a class="code hl_typedef" href="event_8h.html#a57aba5d77747e7e24dfc0ddefa91629b">ShrdEvent</a> = std::shared_ptr&lt;Event&gt;;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="event_8h.html#a0f4eb46316c4726af4eb49364a67a8c8">   12</a></span><span class="keyword">using </span><a class="code hl_typedef" href="event_8h.html#a0f4eb46316c4726af4eb49364a67a8c8">SharedMsg</a> = std::shared_ptr&lt;ProtoMessage::GameMessage&gt;;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="foldopen" id="foldopen00014" data-start="{" data-end="};">
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613">   14</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613">EventPriority</a> : <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_enumvalue" href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613a35c3ace1970663a16e5c65baa5941b13">kNone</a> = 0</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">/* Events with these priority are handled the faster the high EventPriority.*/</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    , <a class="code hl_enumvalue" href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613acd8fe42741a3bbc973bbf1d404afeff4">kLow</a></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    , <a class="code hl_enumvalue" href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613a3ce9d817402b59f65fb01ea044bb1ee9">kMedium</a></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    , <a class="code hl_enumvalue" href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613aa022f15e910eb36278094efb6e808a07">kHigh</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="comment">/* Events with thise priority are handled first. */</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    , <a class="code hl_enumvalue" href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613ae3587c730cc1aa530fa4ddc9c4204e97">kError</a></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    , <a class="code hl_enumvalue" href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613a84e433ab4609f1c798e455b2523c2a98">kEndGame</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>};</div>
+</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="foldopen" id="foldopen00028" data-start="{" data-end="};">
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="event_8h.html#a921bea877914e2bf0856fa61313d2629">   28</a></span><span class="keyword">enum class</span> <a class="code hl_enumeration" href="event_8h.html#a921bea877914e2bf0856fa61313d2629">EventType</a> : <span class="keywordtype">unsigned</span> <span class="keywordtype">short</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>{</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <a class="code hl_enumvalue" href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613a35c3ace1970663a16e5c65baa5941b13">kNone</a> = 0</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="comment">/* UserHandler handles these events */</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629a0aecc0adfa4e90597339a8a8441778ba">kFirstConnect</a></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629abf55fc79f036ce4fea8eeb35a8a13b88">kSuccessCheckLogPas</a></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629a99078108fbdab303d1febe2a321b4a80">kFailureCheckLogPas</a></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629ab320da4595b495406a9749bad2e43732">kAvatarsDataReady</a>    </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">/* NetworkHandler handles these events */</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629a8a3b745541ef250c792de692a54af116">kUserLogPasServerRequest</a></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629a5fc8ee48c0c56b8e0c5e24bc88c400c4">kAvatarListIsReady</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629a53cd1486a2b1d100642e2bda017dc5a6">kStartGameServerResponseSucsses</a> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629a91b38dfbdf306af957c0ba22fb5cf436">kExitGameResponse</a></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="comment">/* DatabaseHandler handles these events */</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629aebae12d7c937b743dcc14615c89d15af">kUserLogPasClientResponse</a></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629a3e9f7058dc7c25fe1c5286a7da7ba767">kUsersAvatarListClientRequest</a></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629a50e515120f9b7e010dd1f6c3d13a7d1a">kGetAvatarsData</a></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629abc7535d303037ff917effe7d6cb333a7">kAddItemInInventory</a>    </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629a5db6b6ab6b584b35aee715796431c8d3">kSaveGame</a></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">/* GameHandler handles these events */</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629a8ffcf14f9269e2cdc8f086caed5e14e8">kExitGameRequest</a></div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="comment">/* Few handlers handle these events */</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629a248c0d18c59730fb232512cf5797423c">kStartGameClientRequest</a> <span class="comment">/*DatabaseHandler + GameHandler*/</span></div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="comment">/* EventDispatcher routing these events */</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629abf5b639c245ebb59f065e7418413f0db">kBroadcastMessage</a> <span class="comment">/* to the NetworkHandler */</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629aeaff67467eed443cd69d52fe5ca8d152">kDisconnectSession</a> <span class="comment">/* to the session */</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    , <a class="code hl_enumvalue" href="event_8h.html#a921bea877914e2bf0856fa61313d2629a374bf9ba57a441a600d65b212cf9d13c">kEnd</a></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>};</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
+<div class="foldopen" id="foldopen00067" data-start="{" data-end="};">
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno"><a class="line" href="class_event.html">   67</a></span><span class="keyword">class </span><a class="code hl_class" href="class_event.html">Event</a> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>{</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_function" href="class_event.html#ab1ec91d7ec3d4f11b8b965a440347d3b">Event</a>(<a class="code hl_enumeration" href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613">EventPriority</a>, <a class="code hl_enumeration" href="event_8h.html#a921bea877914e2bf0856fa61313d2629">EventType</a>, <span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_event.html#a105223995bbf1a1e4714d0c77f91cf0b">   72</a></span>    <span class="keyword">virtual</span> <a class="code hl_function" href="class_event.html#a105223995bbf1a1e4714d0c77f91cf0b">~Event</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_enumeration" href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613">EventPriority</a> <a class="code hl_function" href="class_event.html#addc69178c85be30b729eac46efc3adf0">GetPriority</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_enumeration" href="event_8h.html#a921bea877914e2bf0856fa61313d2629">EventType</a> <a class="code hl_function" href="class_event.html#ada67f712274ef1a5f95df22bde85fc48">GetType</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_event.html#ac0e57b1c12e8579aa9d56504ff35d27f">GetRoutingKey</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    <span class="keyword">const</span> <a class="code hl_enumeration" href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613">EventPriority</a> priority_;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">const</span> <a class="code hl_enumeration" href="event_8h.html#a921bea877914e2bf0856fa61313d2629">EventType</a> type_;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keyword">const</span> std::string&amp; event_routing_key_;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>};</div>
+</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="foldopen" id="foldopen00097" data-start="{" data-end="};">
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno"><a class="line" href="class_first_connect.html">   97</a></span><span class="keyword">class </span><a class="code hl_class" href="class_first_connect.html">FirstConnect</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>{</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_function" href="class_first_connect.html#a35bfb373ea595133dac24ff2c3420bb5">FirstConnect</a>(<span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno"><a class="line" href="class_first_connect.html#af68ee13dcf2a9ed24c1b492d18ce0b9b">  101</a></span>    <a class="code hl_function" href="class_first_connect.html#af68ee13dcf2a9ed24c1b492d18ce0b9b">~FirstConnect</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>};</div>
+</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span> </div>
+<div class="foldopen" id="foldopen00108" data-start="{" data-end="};">
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno"><a class="line" href="class_login_request.html">  108</a></span><span class="keyword">class </span><a class="code hl_class" href="class_login_request.html">LoginRequest</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>{</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    <a class="code hl_function" href="class_login_request.html#a5655d5a0cdd552a3e746620003d63081">LoginRequest</a>(<span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno"><a class="line" href="class_login_request.html#aa2a80146d2b437889c1dde97a0ccb3e2">  112</a></span>    <a class="code hl_function" href="class_login_request.html#aa2a80146d2b437889c1dde97a0ccb3e2">~LoginRequest</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>};</div>
+</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span> </div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span> </div>
+<div class="foldopen" id="foldopen00121" data-start="{" data-end="};">
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno"><a class="line" href="class_log_pas_client_response.html">  121</a></span><span class="keyword">class </span><a class="code hl_class" href="class_log_pas_client_response.html">LogPasClientResponse</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>{</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <a class="code hl_function" href="class_log_pas_client_response.html#ade41f8d2d0a30596c362a65046ed25ec">LogPasClientResponse</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="event_8h.html#a0f4eb46316c4726af4eb49364a67a8c8">SharedMsg</a></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>        , <span class="keyword">const</span> std::string&amp; session_id);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno"><a class="line" href="class_log_pas_client_response.html#a7d4259719d416a4b88d4993aeec297f3">  126</a></span>    <a class="code hl_function" href="class_log_pas_client_response.html#a7d4259719d416a4b88d4993aeec297f3">~LogPasClientResponse</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span> </div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="event_8h.html#a0f4eb46316c4726af4eb49364a67a8c8">SharedMsg</a> <a class="code hl_function" href="class_log_pas_client_response.html#a917cef2bd3b58cc125158bed1d20fb3f">GetEventMessage</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_log_pas_client_response.html#acedfab94ad6b4cb489489b09e47b65b6">GetSessionId</a>();</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span> </div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="event_8h.html#a0f4eb46316c4726af4eb49364a67a8c8">SharedMsg</a> message_;</div>
+<div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>    <span class="keyword">const</span> std::string&amp; session_id_;</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>}; </div>
+</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
+<div class="foldopen" id="foldopen00145" data-start="{" data-end="};">
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno"><a class="line" href="class_success_check_log_pas.html">  145</a></span><span class="keyword">class </span><a class="code hl_class" href="class_success_check_log_pas.html">SuccessCheckLogPas</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>{</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>    <a class="code hl_function" href="class_success_check_log_pas.html#a4d0b1775d37cd4a33698d2aba1cc9c09">SuccessCheckLogPas</a>(<span class="keyword">const</span> std::string&amp; session_id</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>        , std::shared_ptr&lt;const std::string&gt; uuid);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno"><a class="line" href="class_success_check_log_pas.html#a25f7b7aca164880b83a83ee931db5283">  150</a></span>    <a class="code hl_function" href="class_success_check_log_pas.html#a25f7b7aca164880b83a83ee931db5283">~SuccessCheckLogPas</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span> </div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>    std::shared_ptr&lt;const std::string&gt; <a class="code hl_function" href="class_success_check_log_pas.html#a9375206a2f69afbe1a14b4b4e13baa3e">GetUuid</a>();</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span> </div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>    std::shared_ptr&lt;const std::string&gt; uuid_;</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>};</div>
+</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span> </div>
+<div class="foldopen" id="foldopen00162" data-start="{" data-end="};">
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno"><a class="line" href="class_failure_check_log_pas.html">  162</a></span><span class="keyword">class </span><a class="code hl_class" href="class_failure_check_log_pas.html">FailureCheckLogPas</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>{</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <a class="code hl_function" href="class_failure_check_log_pas.html#a0bea26a9751043b28c3ac2dfa54dadc1">FailureCheckLogPas</a>(<span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno"><a class="line" href="class_failure_check_log_pas.html#ab17a0c8e11ca0ea13319dd292ce58f8b">  166</a></span>    <a class="code hl_function" href="class_failure_check_log_pas.html#ab17a0c8e11ca0ea13319dd292ce58f8b">~FailureCheckLogPas</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>};</div>
+</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span> </div>
+<div class="foldopen" id="foldopen00173" data-start="{" data-end="};">
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno"><a class="line" href="class_avatar_list_client_request.html">  173</a></span><span class="keyword">class </span><a class="code hl_class" href="class_avatar_list_client_request.html">AvatarListClientRequest</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>{</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>    <a class="code hl_function" href="class_avatar_list_client_request.html#a089f3bffeec4a6d239750142aeb4d924">AvatarListClientRequest</a>(<span class="keyword">const</span> std::string&amp; session_id, <span class="keyword">const</span> std::string&amp; uuid);</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno"><a class="line" href="class_avatar_list_client_request.html#a11c715bc7a03256f2207040cf31d8c52">  177</a></span>    <a class="code hl_function" href="class_avatar_list_client_request.html#a11c715bc7a03256f2207040cf31d8c52">~AvatarListClientRequest</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span> </div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_avatar_list_client_request.html#a4497a534dd8075a7a738edde23423d21">GetSessionId</a>();</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_avatar_list_client_request.html#a6c2297633eb4934b422cef54e6e81028">GetUuid</a>();</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>    <span class="keyword">const</span> std::string&amp; session_id_;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>    <span class="keyword">const</span> std::string&amp; uuid_;</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>};</div>
+</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span> </div>
+<div class="foldopen" id="foldopen00194" data-start="{" data-end="};">
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="class_avatar_list_is_ready.html">  194</a></span><span class="keyword">class </span><a class="code hl_class" href="class_avatar_list_is_ready.html">AvatarListIsReady</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>{</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno"><a class="line" href="class_avatar_list_is_ready.html#a25873d0ba14de5641e0c5a877a48f1d0">  197</a></span>    <span class="keyword">using </span><a class="code hl_typedef" href="class_avatar_list_is_ready.html#a25873d0ba14de5641e0c5a877a48f1d0">PairIntStr</a> = std::pair&lt;int32_t, std::string&gt;;</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>    <a class="code hl_function" href="class_avatar_list_is_ready.html#a81593dfcbefe0c540e366a2d3e2420af">AvatarListIsReady</a>(<span class="keyword">const</span> std::shared_ptr&lt;std::vector&lt;PairIntStr&gt;&gt;, <span class="keyword">const</span> std::string&amp;);</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno"><a class="line" href="class_avatar_list_is_ready.html#ae72a59da96f58b8502425ef7c4ebdeb6">  200</a></span>    <a class="code hl_function" href="class_avatar_list_is_ready.html#ae72a59da96f58b8502425ef7c4ebdeb6">~AvatarListIsReady</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    <span class="keyword">const</span> std::shared_ptr&lt;std::vector&lt;PairIntStr&gt;&gt; <a class="code hl_function" href="class_avatar_list_is_ready.html#a1cdbf3bcb89d9cdb7a600c97b81dd9c3">GetAvatars</a>();</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>        </div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>    <span class="keyword">const</span> std::shared_ptr&lt;std::vector&lt;PairIntStr&gt;&gt; avatars_;</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>};</div>
+</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span> </div>
+<div class="foldopen" id="foldopen00212" data-start="{" data-end="};">
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno"><a class="line" href="class_start_game_client_request.html">  212</a></span><span class="keyword">class </span><a class="code hl_class" href="class_start_game_client_request.html">StartGameClientRequest</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>{</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <a class="code hl_function" href="class_start_game_client_request.html#ab42a8dc933c022e8df41b0c2e199f461">StartGameClientRequest</a>(<span class="keyword">const</span> std::string&amp; session_id);</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno"><a class="line" href="class_start_game_client_request.html#a62aa7d541773d0a1c4e43553ae207c00">  216</a></span>    <a class="code hl_function" href="class_start_game_client_request.html#a62aa7d541773d0a1c4e43553ae207c00">~StartGameClientRequest</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>};</div>
+</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="foldopen" id="foldopen00223" data-start="{" data-end="};">
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="class_avatar_data_ready.html">  223</a></span><span class="keyword">class </span><a class="code hl_class" href="class_avatar_data_ready.html">AvatarDataReady</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>{</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <a class="code hl_function" href="class_avatar_data_ready.html#a60b8060295dc7cf5c5ee29acfa6537ac">AvatarDataReady</a>(<span class="keyword">const</span> std::string&amp;, std::shared_ptr&lt;Avatar&gt;);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno"><a class="line" href="class_avatar_data_ready.html#a96864c0cacd625449ea0b371f7d8225b">  227</a></span>    <a class="code hl_function" href="class_avatar_data_ready.html#a96864c0cacd625449ea0b371f7d8225b">~AvatarDataReady</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    std::shared_ptr&lt;Avatar&gt; <a class="code hl_function" href="class_avatar_data_ready.html#adde6d749bd87ae6eb431443ae37144ef">MoveAvatar</a>();</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>    <span class="keyword">const</span> std::shared_ptr&lt;Avatar&gt; avatar_;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>};</div>
+</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="foldopen" id="foldopen00238" data-start="{" data-end="};">
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno"><a class="line" href="class_get_avatars_data.html">  238</a></span><span class="keyword">class </span><a class="code hl_class" href="class_get_avatars_data.html">GetAvatarsData</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>{</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <a class="code hl_function" href="class_get_avatars_data.html#ab247aa9dd0bc1fba6a0aed7c00f72573">GetAvatarsData</a>(<span class="keyword">const</span> std::string&amp; session_id, <span class="keyword">const</span> uint32_t id_selected_avatar);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="class_get_avatars_data.html#a629728847aec99d22ddedc168dfff151">  242</a></span>    <a class="code hl_function" href="class_get_avatars_data.html#a629728847aec99d22ddedc168dfff151">~GetAvatarsData</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span> </div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>    uint32_t <a class="code hl_function" href="class_get_avatars_data.html#a3722d8c6b4fc769c8d85ba207120ce79">GetIdSelectedAvatar</a>();</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_get_avatars_data.html#aa9303737d2711ca705dd738c4bec6132">GetSessionId</a>();</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>    <span class="keyword">const</span> uint32_t avatar_id_;</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="keyword">const</span> std::string&amp; session_id_;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>};</div>
+</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span> </div>
+<div class="foldopen" id="foldopen00256" data-start="{" data-end="};">
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno"><a class="line" href="class_start_game_server_response_sucsses.html">  256</a></span><span class="keyword">class </span><a class="code hl_class" href="class_start_game_server_response_sucsses.html">StartGameServerResponseSucsses</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>{</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>    <a class="code hl_function" href="class_start_game_server_response_sucsses.html#ac38a2cb39b38b4f1c2202ab4e1167b0e">StartGameServerResponseSucsses</a>(<span class="keyword">const</span> std::string&amp; session_id, <span class="keyword">const</span> std::shared_ptr&lt;Avatar&gt;);</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno"><a class="line" href="class_start_game_server_response_sucsses.html#aa4181b191fbf23e5f3eb055634ebdc9a">  260</a></span>    <a class="code hl_function" href="class_start_game_server_response_sucsses.html#aa4181b191fbf23e5f3eb055634ebdc9a">~StartGameServerResponseSucsses</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span> </div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>    <span class="keyword">const</span> std::shared_ptr&lt;const Avatar&gt; <a class="code hl_function" href="class_start_game_server_response_sucsses.html#add3457b94b69996ae6b994e4928f3d4e">GetConstAvatar</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span> </div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    <span class="keyword">const</span> std::shared_ptr&lt;const Avatar&gt; avatar_;</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>};</div>
+</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span> </div>
+<div class="foldopen" id="foldopen00272" data-start="{" data-end="};">
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno"><a class="line" href="class_add_item_in_inventory.html">  272</a></span><span class="keyword">class </span><a class="code hl_class" href="class_add_item_in_inventory.html">AddItemInInventory</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>{</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>    <a class="code hl_function" href="class_add_item_in_inventory.html#a889c59e07f8001a714efb9b875aff626">AddItemInInventory</a>(<a class="code hl_enumeration" href="game__elements_8h.html#a40760495e5ae271c586f8c9f5e758868">ItemType</a>, uint32_t avatar_id);</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno"><a class="line" href="class_add_item_in_inventory.html#a4453d5eb24180cf51ced19c93ecb6a0b">  276</a></span>    <a class="code hl_function" href="class_add_item_in_inventory.html#a4453d5eb24180cf51ced19c93ecb6a0b">~AddItemInInventory</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span> </div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>    <a class="code hl_enumeration" href="game__elements_8h.html#a40760495e5ae271c586f8c9f5e758868">ItemType</a> <a class="code hl_function" href="class_add_item_in_inventory.html#a9f6509c5a30855df2996ec9a6eb0d368">GetItem</a>();</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    uint32_t <a class="code hl_function" href="class_add_item_in_inventory.html#aa809f10a57139c2643eecafe9af1c8e4">GetAvatarId</a>();</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span>    <a class="code hl_enumeration" href="game__elements_8h.html#a40760495e5ae271c586f8c9f5e758868">ItemType</a> item_;</div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    uint32_t avatar_id_;</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>};</div>
+</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="foldopen" id="foldopen00289" data-start="{" data-end="};">
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno"><a class="line" href="class_broadcast_message.html">  289</a></span><span class="keyword">class </span><a class="code hl_class" href="class_broadcast_message.html">BroadcastMessage</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>{</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>    <a class="code hl_function" href="class_broadcast_message.html#a00e0843dc6dcc4abd9387ff858a06492">BroadcastMessage</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="event_8h.html#a0f4eb46316c4726af4eb49364a67a8c8">SharedMsg</a>, </div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>        <span class="keyword">const</span> std::string&amp; session_id);</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno"><a class="line" href="class_broadcast_message.html#ad1f82db39fa3ec73b0262e68a52907d0">  297</a></span>    <a class="code hl_function" href="class_broadcast_message.html#ad1f82db39fa3ec73b0262e68a52907d0">~BroadcastMessage</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span> </div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="event_8h.html#a0f4eb46316c4726af4eb49364a67a8c8">SharedMsg</a> <a class="code hl_function" href="class_broadcast_message.html#a71fea755aad225e36d0bc18214c0f481">GetEventMessage</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>  </div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="event_8h.html#a0f4eb46316c4726af4eb49364a67a8c8">SharedMsg</a> message_;</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>};</div>
+</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="foldopen" id="foldopen00309" data-start="{" data-end="};">
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno"><a class="line" href="class_exit_game_request.html">  309</a></span><span class="keyword">class </span><a class="code hl_class" href="class_exit_game_request.html">ExitGameRequest</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>{</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>    <a class="code hl_function" href="class_exit_game_request.html#ad1d7c4a4d659b8fac4e2f9a480be0ef9">ExitGameRequest</a>(<span class="keyword">const</span> <a class="code hl_typedef" href="event_8h.html#a0f4eb46316c4726af4eb49364a67a8c8">SharedMsg</a>,  <span class="keyword">const</span> std::string&amp; session_id);</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno"><a class="line" href="class_exit_game_request.html#a83870021c48447a269eb2e72061195fd">  313</a></span>    <a class="code hl_function" href="class_exit_game_request.html#a83870021c48447a269eb2e72061195fd">~ExitGameRequest</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span> </div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="event_8h.html#a0f4eb46316c4726af4eb49364a67a8c8">SharedMsg</a> <a class="code hl_function" href="class_exit_game_request.html#a61be5baf7cc4f16bb6387c7b979d4ec4">GetEventMessage</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span> </div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>    <span class="keyword">const</span> <a class="code hl_typedef" href="event_8h.html#a0f4eb46316c4726af4eb49364a67a8c8">SharedMsg</a> message_;</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>};</div>
+</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span> </div>
+<div class="foldopen" id="foldopen00325" data-start="{" data-end="};">
+<div class="line"><a id="l00325" name="l00325"></a><span class="lineno"><a class="line" href="class_save_game.html">  325</a></span><span class="keyword">class </span><a class="code hl_class" href="class_save_game.html">SaveGame</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno">  326</span>{</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>    <a class="code hl_function" href="class_save_game.html#a5d4c13fb8e0a28491e2aa7a8f2bf030c">SaveGame</a>(<span class="keyword">const</span> std::string&amp; session_id, <span class="keyword">const</span> std::shared_ptr&lt;Avatar&gt;</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>        , <span class="keywordtype">bool</span> exit_game = <span class="keyword">false</span>);</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno"><a class="line" href="class_save_game.html#a394a0b509605676bb9f0b71dbac51ff6">  330</a></span>    <a class="code hl_function" href="class_save_game.html#a394a0b509605676bb9f0b71dbac51ff6">~SaveGame</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span> </div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>    <span class="keyword">const</span> std::string&amp; <a class="code hl_function" href="class_save_game.html#aa3898ac13c48f26cbb6540c9b0b5737c">GetSessionId</a>();</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    <span class="keyword">const</span> std::shared_ptr&lt;const Avatar&gt; <a class="code hl_function" href="class_save_game.html#a1d55d870de0d2b53f6537e654be8326c">GetConstAvatar</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_save_game.html#ab183f9bfd2277e00038ae331d83ca8e2">IsExitGame</a>();</div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span> </div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>    <span class="keyword">const</span> std::string&amp; session_id_;</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    <span class="keyword">const</span> std::shared_ptr&lt;const Avatar&gt; avatar_;</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>    <span class="keywordtype">bool</span> exit_game_;</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>};</div>
+</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span> </div>
+<div class="foldopen" id="foldopen00346" data-start="{" data-end="};">
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno"><a class="line" href="class_exit_game_response.html">  346</a></span><span class="keyword">class </span><a class="code hl_class" href="class_exit_game_response.html">ExitGameResponse</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>{</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>    <a class="code hl_function" href="class_exit_game_response.html#adf475dadbbf1d6bd4d801d5f97c7303b">ExitGameResponse</a>(<span class="keyword">const</span> std::string&amp; session_id);</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno"><a class="line" href="class_exit_game_response.html#a77e0272041cc2ae2691cf495648b488d">  350</a></span>    <a class="code hl_function" href="class_exit_game_response.html#a77e0272041cc2ae2691cf495648b488d">~ExitGameResponse</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>};</div>
+</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span> </div>
+<div class="foldopen" id="foldopen00357" data-start="{" data-end="};">
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno"><a class="line" href="class_disconnect_session.html">  357</a></span><span class="keyword">class </span><a class="code hl_class" href="class_disconnect_session.html">DisconnectSession</a> : <span class="keyword">public</span> <a class="code hl_class" href="class_event.html">Event</a></div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>{</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    <a class="code hl_function" href="class_disconnect_session.html#aa83b9cbe002ba70999992b6f4b41f1dc">DisconnectSession</a>(<span class="keyword">const</span> std::string session_id);</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno"><a class="line" href="class_disconnect_session.html#a90fdb82c48d6b5546b92d76c31c45f43">  361</a></span>    <a class="code hl_function" href="class_disconnect_session.html#a90fdb82c48d6b5546b92d76c31c45f43">~DisconnectSession</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span> </div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span>    <span class="keyword">const</span> std::string session_id_;</div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>};</div>
+</div>
+<div class="ttc" id="aclass_add_item_in_inventory_html"><div class="ttname"><a href="class_add_item_in_inventory.html">AddItemInInventory</a></div><div class="ttdoc">Added: NetworkHandler. Handles: DatabaseHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00272">event.h:273</a></div></div>
+<div class="ttc" id="aclass_add_item_in_inventory_html_a4453d5eb24180cf51ced19c93ecb6a0b"><div class="ttname"><a href="class_add_item_in_inventory.html#a4453d5eb24180cf51ced19c93ecb6a0b">AddItemInInventory::~AddItemInInventory</a></div><div class="ttdeci">~AddItemInInventory()=default</div></div>
+<div class="ttc" id="aclass_add_item_in_inventory_html_a889c59e07f8001a714efb9b875aff626"><div class="ttname"><a href="class_add_item_in_inventory.html#a889c59e07f8001a714efb9b875aff626">AddItemInInventory::AddItemInInventory</a></div><div class="ttdeci">AddItemInInventory(ItemType, uint32_t avatar_id)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00143">event.cpp:143</a></div></div>
+<div class="ttc" id="aclass_add_item_in_inventory_html_a9f6509c5a30855df2996ec9a6eb0d368"><div class="ttname"><a href="class_add_item_in_inventory.html#a9f6509c5a30855df2996ec9a6eb0d368">AddItemInInventory::GetItem</a></div><div class="ttdeci">ItemType GetItem()</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00150">event.cpp:150</a></div></div>
+<div class="ttc" id="aclass_add_item_in_inventory_html_aa809f10a57139c2643eecafe9af1c8e4"><div class="ttname"><a href="class_add_item_in_inventory.html#aa809f10a57139c2643eecafe9af1c8e4">AddItemInInventory::GetAvatarId</a></div><div class="ttdeci">uint32_t GetAvatarId()</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00155">event.cpp:155</a></div></div>
+<div class="ttc" id="aclass_avatar_data_ready_html"><div class="ttname"><a href="class_avatar_data_ready.html">AvatarDataReady</a></div><div class="ttdoc">Add these events: DatabaseHandler. Handles: GameHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00223">event.h:224</a></div></div>
+<div class="ttc" id="aclass_avatar_data_ready_html_a60b8060295dc7cf5c5ee29acfa6537ac"><div class="ttname"><a href="class_avatar_data_ready.html#a60b8060295dc7cf5c5ee29acfa6537ac">AvatarDataReady::AvatarDataReady</a></div><div class="ttdeci">AvatarDataReady(const std::string &amp;, std::shared_ptr&lt; Avatar &gt;)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00103">event.cpp:103</a></div></div>
+<div class="ttc" id="aclass_avatar_data_ready_html_a96864c0cacd625449ea0b371f7d8225b"><div class="ttname"><a href="class_avatar_data_ready.html#a96864c0cacd625449ea0b371f7d8225b">AvatarDataReady::~AvatarDataReady</a></div><div class="ttdeci">~AvatarDataReady()=default</div></div>
+<div class="ttc" id="aclass_avatar_data_ready_html_adde6d749bd87ae6eb431443ae37144ef"><div class="ttname"><a href="class_avatar_data_ready.html#adde6d749bd87ae6eb431443ae37144ef">AvatarDataReady::MoveAvatar</a></div><div class="ttdeci">std::shared_ptr&lt; Avatar &gt; MoveAvatar()</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00108">event.cpp:108</a></div></div>
+<div class="ttc" id="aclass_avatar_list_client_request_html"><div class="ttname"><a href="class_avatar_list_client_request.html">AvatarListClientRequest</a></div><div class="ttdoc">Added: NetworkHandler. Handles: DatabaseHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00173">event.h:174</a></div></div>
+<div class="ttc" id="aclass_avatar_list_client_request_html_a089f3bffeec4a6d239750142aeb4d924"><div class="ttname"><a href="class_avatar_list_client_request.html#a089f3bffeec4a6d239750142aeb4d924">AvatarListClientRequest::AvatarListClientRequest</a></div><div class="ttdeci">AvatarListClientRequest(const std::string &amp;session_id, const std::string &amp;uuid)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00068">event.cpp:68</a></div></div>
+<div class="ttc" id="aclass_avatar_list_client_request_html_a11c715bc7a03256f2207040cf31d8c52"><div class="ttname"><a href="class_avatar_list_client_request.html#a11c715bc7a03256f2207040cf31d8c52">AvatarListClientRequest::~AvatarListClientRequest</a></div><div class="ttdeci">~AvatarListClientRequest()=default</div></div>
+<div class="ttc" id="aclass_avatar_list_client_request_html_a4497a534dd8075a7a738edde23423d21"><div class="ttname"><a href="class_avatar_list_client_request.html#a4497a534dd8075a7a738edde23423d21">AvatarListClientRequest::GetSessionId</a></div><div class="ttdeci">const std::string &amp; GetSessionId()</div><div class="ttdoc">Used by DatabaseHandler to add this event in the common queue.</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00076">event.cpp:76</a></div></div>
+<div class="ttc" id="aclass_avatar_list_client_request_html_a6c2297633eb4934b422cef54e6e81028"><div class="ttname"><a href="class_avatar_list_client_request.html#a6c2297633eb4934b422cef54e6e81028">AvatarListClientRequest::GetUuid</a></div><div class="ttdeci">const std::string &amp; GetUuid()</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00081">event.cpp:81</a></div></div>
+<div class="ttc" id="aclass_avatar_list_is_ready_html"><div class="ttname"><a href="class_avatar_list_is_ready.html">AvatarListIsReady</a></div><div class="ttdoc">Added: DatabaseHandler. Handles: NetworkHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00194">event.h:195</a></div></div>
+<div class="ttc" id="aclass_avatar_list_is_ready_html_a1cdbf3bcb89d9cdb7a600c97b81dd9c3"><div class="ttname"><a href="class_avatar_list_is_ready.html#a1cdbf3bcb89d9cdb7a600c97b81dd9c3">AvatarListIsReady::GetAvatars</a></div><div class="ttdeci">const std::shared_ptr&lt; std::vector&lt; PairIntStr &gt; &gt; GetAvatars()</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00093">event.cpp:93</a></div></div>
+<div class="ttc" id="aclass_avatar_list_is_ready_html_a25873d0ba14de5641e0c5a877a48f1d0"><div class="ttname"><a href="class_avatar_list_is_ready.html#a25873d0ba14de5641e0c5a877a48f1d0">AvatarListIsReady::PairIntStr</a></div><div class="ttdeci">std::pair&lt; int32_t, std::string &gt; PairIntStr</div><div class="ttdef"><b>Definition</b> <a href="#l00197">event.h:197</a></div></div>
+<div class="ttc" id="aclass_avatar_list_is_ready_html_a81593dfcbefe0c540e366a2d3e2420af"><div class="ttname"><a href="class_avatar_list_is_ready.html#a81593dfcbefe0c540e366a2d3e2420af">AvatarListIsReady::AvatarListIsReady</a></div><div class="ttdeci">AvatarListIsReady(const std::shared_ptr&lt; std::vector&lt; PairIntStr &gt; &gt;, const std::string &amp;)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00086">event.cpp:86</a></div></div>
+<div class="ttc" id="aclass_avatar_list_is_ready_html_ae72a59da96f58b8502425ef7c4ebdeb6"><div class="ttname"><a href="class_avatar_list_is_ready.html#ae72a59da96f58b8502425ef7c4ebdeb6">AvatarListIsReady::~AvatarListIsReady</a></div><div class="ttdeci">~AvatarListIsReady()=default</div></div>
+<div class="ttc" id="aclass_broadcast_message_html"><div class="ttname"><a href="class_broadcast_message.html">BroadcastMessage</a></div><div class="ttdoc">Added: sender's NetworkHandler. Handles: all client's NetworkHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00289">event.h:290</a></div></div>
+<div class="ttc" id="aclass_broadcast_message_html_a00e0843dc6dcc4abd9387ff858a06492"><div class="ttname"><a href="class_broadcast_message.html#a00e0843dc6dcc4abd9387ff858a06492">BroadcastMessage::BroadcastMessage</a></div><div class="ttdeci">BroadcastMessage(const SharedMsg, const std::string &amp;session_id)</div><div class="ttdoc">EventDispatcher uses the session_id for filtering.</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00160">event.cpp:160</a></div></div>
+<div class="ttc" id="aclass_broadcast_message_html_a71fea755aad225e36d0bc18214c0f481"><div class="ttname"><a href="class_broadcast_message.html#a71fea755aad225e36d0bc18214c0f481">BroadcastMessage::GetEventMessage</a></div><div class="ttdeci">const SharedMsg GetEventMessage() const</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00166">event.cpp:166</a></div></div>
+<div class="ttc" id="aclass_broadcast_message_html_ad1f82db39fa3ec73b0262e68a52907d0"><div class="ttname"><a href="class_broadcast_message.html#ad1f82db39fa3ec73b0262e68a52907d0">BroadcastMessage::~BroadcastMessage</a></div><div class="ttdeci">~BroadcastMessage()=default</div></div>
+<div class="ttc" id="aclass_disconnect_session_html"><div class="ttname"><a href="class_disconnect_session.html">DisconnectSession</a></div><div class="ttdoc">Added: DatabaseHandler. Handles: NetworkHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00357">event.h:358</a></div></div>
+<div class="ttc" id="aclass_disconnect_session_html_a90fdb82c48d6b5546b92d76c31c45f43"><div class="ttname"><a href="class_disconnect_session.html#a90fdb82c48d6b5546b92d76c31c45f43">DisconnectSession::~DisconnectSession</a></div><div class="ttdeci">~DisconnectSession()=default</div></div>
+<div class="ttc" id="aclass_disconnect_session_html_aa83b9cbe002ba70999992b6f4b41f1dc"><div class="ttname"><a href="class_disconnect_session.html#aa83b9cbe002ba70999992b6f4b41f1dc">DisconnectSession::DisconnectSession</a></div><div class="ttdeci">DisconnectSession(const std::string session_id)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00208">event.cpp:208</a></div></div>
+<div class="ttc" id="aclass_event_html"><div class="ttname"><a href="class_event.html">Event</a></div><div class="ttdef"><b>Definition</b> <a href="#l00067">event.h:68</a></div></div>
+<div class="ttc" id="aclass_event_html_a105223995bbf1a1e4714d0c77f91cf0b"><div class="ttname"><a href="class_event.html#a105223995bbf1a1e4714d0c77f91cf0b">Event::~Event</a></div><div class="ttdeci">virtual ~Event()=default</div></div>
+<div class="ttc" id="aclass_event_html_ab1ec91d7ec3d4f11b8b965a440347d3b"><div class="ttname"><a href="class_event.html#ab1ec91d7ec3d4f11b8b965a440347d3b">Event::Event</a></div><div class="ttdeci">Event(EventPriority, EventType, const std::string &amp;)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00003">event.cpp:3</a></div></div>
+<div class="ttc" id="aclass_event_html_ac0e57b1c12e8579aa9d56504ff35d27f"><div class="ttname"><a href="class_event.html#ac0e57b1c12e8579aa9d56504ff35d27f">Event::GetRoutingKey</a></div><div class="ttdeci">const std::string &amp; GetRoutingKey() const</div><div class="ttdoc">event_routing_key_ == client's session_id_ for most events except those handled by the DatabaseHandle...</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00018">event.cpp:18</a></div></div>
+<div class="ttc" id="aclass_event_html_ada67f712274ef1a5f95df22bde85fc48"><div class="ttname"><a href="class_event.html#ada67f712274ef1a5f95df22bde85fc48">Event::GetType</a></div><div class="ttdeci">EventType GetType() const</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00013">event.cpp:13</a></div></div>
+<div class="ttc" id="aclass_event_html_addc69178c85be30b729eac46efc3adf0"><div class="ttname"><a href="class_event.html#addc69178c85be30b729eac46efc3adf0">Event::GetPriority</a></div><div class="ttdeci">EventPriority GetPriority() const</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00008">event.cpp:8</a></div></div>
+<div class="ttc" id="aclass_exit_game_request_html"><div class="ttname"><a href="class_exit_game_request.html">ExitGameRequest</a></div><div class="ttdoc">Added: NetworkHandler. Handles: GameHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00309">event.h:310</a></div></div>
+<div class="ttc" id="aclass_exit_game_request_html_a61be5baf7cc4f16bb6387c7b979d4ec4"><div class="ttname"><a href="class_exit_game_request.html#a61be5baf7cc4f16bb6387c7b979d4ec4">ExitGameRequest::GetEventMessage</a></div><div class="ttdeci">const SharedMsg GetEventMessage() const</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00176">event.cpp:176</a></div></div>
+<div class="ttc" id="aclass_exit_game_request_html_a83870021c48447a269eb2e72061195fd"><div class="ttname"><a href="class_exit_game_request.html#a83870021c48447a269eb2e72061195fd">ExitGameRequest::~ExitGameRequest</a></div><div class="ttdeci">~ExitGameRequest()=default</div></div>
+<div class="ttc" id="aclass_exit_game_request_html_ad1d7c4a4d659b8fac4e2f9a480be0ef9"><div class="ttname"><a href="class_exit_game_request.html#ad1d7c4a4d659b8fac4e2f9a480be0ef9">ExitGameRequest::ExitGameRequest</a></div><div class="ttdeci">ExitGameRequest(const SharedMsg, const std::string &amp;session_id)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00171">event.cpp:171</a></div></div>
+<div class="ttc" id="aclass_exit_game_response_html"><div class="ttname"><a href="class_exit_game_response.html">ExitGameResponse</a></div><div class="ttdoc">Added: DatabaseHandler. Handles: NetworkHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00346">event.h:347</a></div></div>
+<div class="ttc" id="aclass_exit_game_response_html_a77e0272041cc2ae2691cf495648b488d"><div class="ttname"><a href="class_exit_game_response.html#a77e0272041cc2ae2691cf495648b488d">ExitGameResponse::~ExitGameResponse</a></div><div class="ttdeci">~ExitGameResponse()=default</div></div>
+<div class="ttc" id="aclass_exit_game_response_html_adf475dadbbf1d6bd4d801d5f97c7303b"><div class="ttname"><a href="class_exit_game_response.html#adf475dadbbf1d6bd4d801d5f97c7303b">ExitGameResponse::ExitGameResponse</a></div><div class="ttdeci">ExitGameResponse(const std::string &amp;session_id)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00203">event.cpp:203</a></div></div>
+<div class="ttc" id="aclass_failure_check_log_pas_html"><div class="ttname"><a href="class_failure_check_log_pas.html">FailureCheckLogPas</a></div><div class="ttdoc">Add these events: DatabaseHandler. Handles: NetworkHandler in MVP-version.</div><div class="ttdef"><b>Definition</b> <a href="#l00162">event.h:163</a></div></div>
+<div class="ttc" id="aclass_failure_check_log_pas_html_a0bea26a9751043b28c3ac2dfa54dadc1"><div class="ttname"><a href="class_failure_check_log_pas.html#a0bea26a9751043b28c3ac2dfa54dadc1">FailureCheckLogPas::FailureCheckLogPas</a></div><div class="ttdeci">FailureCheckLogPas(const std::string &amp;)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00063">event.cpp:63</a></div></div>
+<div class="ttc" id="aclass_failure_check_log_pas_html_ab17a0c8e11ca0ea13319dd292ce58f8b"><div class="ttname"><a href="class_failure_check_log_pas.html#ab17a0c8e11ca0ea13319dd292ce58f8b">FailureCheckLogPas::~FailureCheckLogPas</a></div><div class="ttdeci">~FailureCheckLogPas()=default</div></div>
+<div class="ttc" id="aclass_first_connect_html"><div class="ttname"><a href="class_first_connect.html">FirstConnect</a></div><div class="ttdoc">Add these events: ClientSession. Handles: UserHandler. Does nothing useful in the MVP-version.</div><div class="ttdef"><b>Definition</b> <a href="#l00097">event.h:98</a></div></div>
+<div class="ttc" id="aclass_first_connect_html_a35bfb373ea595133dac24ff2c3420bb5"><div class="ttname"><a href="class_first_connect.html#a35bfb373ea595133dac24ff2c3420bb5">FirstConnect::FirstConnect</a></div><div class="ttdeci">FirstConnect(const std::string &amp;)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00023">event.cpp:23</a></div></div>
+<div class="ttc" id="aclass_first_connect_html_af68ee13dcf2a9ed24c1b492d18ce0b9b"><div class="ttname"><a href="class_first_connect.html#af68ee13dcf2a9ed24c1b492d18ce0b9b">FirstConnect::~FirstConnect</a></div><div class="ttdeci">~FirstConnect()=default</div></div>
+<div class="ttc" id="aclass_get_avatars_data_html"><div class="ttname"><a href="class_get_avatars_data.html">GetAvatarsData</a></div><div class="ttdoc">Add these events: NetworkHandler. Handles: DatabaseHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00238">event.h:239</a></div></div>
+<div class="ttc" id="aclass_get_avatars_data_html_a3722d8c6b4fc769c8d85ba207120ce79"><div class="ttname"><a href="class_get_avatars_data.html#a3722d8c6b4fc769c8d85ba207120ce79">GetAvatarsData::GetIdSelectedAvatar</a></div><div class="ttdeci">uint32_t GetIdSelectedAvatar()</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00121">event.cpp:121</a></div></div>
+<div class="ttc" id="aclass_get_avatars_data_html_a629728847aec99d22ddedc168dfff151"><div class="ttname"><a href="class_get_avatars_data.html#a629728847aec99d22ddedc168dfff151">GetAvatarsData::~GetAvatarsData</a></div><div class="ttdeci">~GetAvatarsData()=default</div></div>
+<div class="ttc" id="aclass_get_avatars_data_html_aa9303737d2711ca705dd738c4bec6132"><div class="ttname"><a href="class_get_avatars_data.html#aa9303737d2711ca705dd738c4bec6132">GetAvatarsData::GetSessionId</a></div><div class="ttdeci">const std::string &amp; GetSessionId()</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00126">event.cpp:126</a></div></div>
+<div class="ttc" id="aclass_get_avatars_data_html_ab247aa9dd0bc1fba6a0aed7c00f72573"><div class="ttname"><a href="class_get_avatars_data.html#ab247aa9dd0bc1fba6a0aed7c00f72573">GetAvatarsData::GetAvatarsData</a></div><div class="ttdeci">GetAvatarsData(const std::string &amp;session_id, const uint32_t id_selected_avatar)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00113">event.cpp:113</a></div></div>
+<div class="ttc" id="aclass_log_pas_client_response_html"><div class="ttname"><a href="class_log_pas_client_response.html">LogPasClientResponse</a></div><div class="ttdoc">Added: NetworkHandler. Handles: DatabaseHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00121">event.h:122</a></div></div>
+<div class="ttc" id="aclass_log_pas_client_response_html_a7d4259719d416a4b88d4993aeec297f3"><div class="ttname"><a href="class_log_pas_client_response.html#a7d4259719d416a4b88d4993aeec297f3">LogPasClientResponse::~LogPasClientResponse</a></div><div class="ttdeci">~LogPasClientResponse()=default</div></div>
+<div class="ttc" id="aclass_log_pas_client_response_html_a917cef2bd3b58cc125158bed1d20fb3f"><div class="ttname"><a href="class_log_pas_client_response.html#a917cef2bd3b58cc125158bed1d20fb3f">LogPasClientResponse::GetEventMessage</a></div><div class="ttdeci">const SharedMsg GetEventMessage() const</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00041">event.cpp:41</a></div></div>
+<div class="ttc" id="aclass_log_pas_client_response_html_acedfab94ad6b4cb489489b09e47b65b6"><div class="ttname"><a href="class_log_pas_client_response.html#acedfab94ad6b4cb489489b09e47b65b6">LogPasClientResponse::GetSessionId</a></div><div class="ttdeci">const std::string &amp; GetSessionId()</div><div class="ttdoc">Used by DatabaseHandler to add this event in the common queue.</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00046">event.cpp:46</a></div></div>
+<div class="ttc" id="aclass_log_pas_client_response_html_ade41f8d2d0a30596c362a65046ed25ec"><div class="ttname"><a href="class_log_pas_client_response.html#ade41f8d2d0a30596c362a65046ed25ec">LogPasClientResponse::LogPasClientResponse</a></div><div class="ttdeci">LogPasClientResponse(const SharedMsg, const std::string &amp;session_id)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00033">event.cpp:33</a></div></div>
+<div class="ttc" id="aclass_login_request_html"><div class="ttname"><a href="class_login_request.html">LoginRequest</a></div><div class="ttdoc">Add these events: UserHandler. Handles:NetworkHandler*.</div><div class="ttdef"><b>Definition</b> <a href="#l00108">event.h:109</a></div></div>
+<div class="ttc" id="aclass_login_request_html_a5655d5a0cdd552a3e746620003d63081"><div class="ttname"><a href="class_login_request.html#a5655d5a0cdd552a3e746620003d63081">LoginRequest::LoginRequest</a></div><div class="ttdeci">LoginRequest(const std::string &amp;)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00028">event.cpp:28</a></div></div>
+<div class="ttc" id="aclass_login_request_html_aa2a80146d2b437889c1dde97a0ccb3e2"><div class="ttname"><a href="class_login_request.html#aa2a80146d2b437889c1dde97a0ccb3e2">LoginRequest::~LoginRequest</a></div><div class="ttdeci">~LoginRequest()=default</div></div>
+<div class="ttc" id="aclass_save_game_html"><div class="ttname"><a href="class_save_game.html">SaveGame</a></div><div class="ttdoc">Added: GameHandler. Handles: DatabaseHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00325">event.h:326</a></div></div>
+<div class="ttc" id="aclass_save_game_html_a1d55d870de0d2b53f6537e654be8326c"><div class="ttname"><a href="class_save_game.html#a1d55d870de0d2b53f6537e654be8326c">SaveGame::GetConstAvatar</a></div><div class="ttdeci">const std::shared_ptr&lt; const Avatar &gt; GetConstAvatar() const</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00188">event.cpp:188</a></div></div>
+<div class="ttc" id="aclass_save_game_html_a394a0b509605676bb9f0b71dbac51ff6"><div class="ttname"><a href="class_save_game.html#a394a0b509605676bb9f0b71dbac51ff6">SaveGame::~SaveGame</a></div><div class="ttdeci">~SaveGame()=default</div></div>
+<div class="ttc" id="aclass_save_game_html_a5d4c13fb8e0a28491e2aa7a8f2bf030c"><div class="ttname"><a href="class_save_game.html#a5d4c13fb8e0a28491e2aa7a8f2bf030c">SaveGame::SaveGame</a></div><div class="ttdeci">SaveGame(const std::string &amp;session_id, const std::shared_ptr&lt; Avatar &gt;, bool exit_game=false)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00181">event.cpp:181</a></div></div>
+<div class="ttc" id="aclass_save_game_html_aa3898ac13c48f26cbb6540c9b0b5737c"><div class="ttname"><a href="class_save_game.html#aa3898ac13c48f26cbb6540c9b0b5737c">SaveGame::GetSessionId</a></div><div class="ttdeci">const std::string &amp; GetSessionId()</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00198">event.cpp:198</a></div></div>
+<div class="ttc" id="aclass_save_game_html_ab183f9bfd2277e00038ae331d83ca8e2"><div class="ttname"><a href="class_save_game.html#ab183f9bfd2277e00038ae331d83ca8e2">SaveGame::IsExitGame</a></div><div class="ttdeci">bool IsExitGame()</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00193">event.cpp:193</a></div></div>
+<div class="ttc" id="aclass_start_game_client_request_html"><div class="ttname"><a href="class_start_game_client_request.html">StartGameClientRequest</a></div><div class="ttdoc">Added: NetworkHandler. Handles: GameHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00212">event.h:213</a></div></div>
+<div class="ttc" id="aclass_start_game_client_request_html_a62aa7d541773d0a1c4e43553ae207c00"><div class="ttname"><a href="class_start_game_client_request.html#a62aa7d541773d0a1c4e43553ae207c00">StartGameClientRequest::~StartGameClientRequest</a></div><div class="ttdeci">~StartGameClientRequest()=default</div></div>
+<div class="ttc" id="aclass_start_game_client_request_html_ab42a8dc933c022e8df41b0c2e199f461"><div class="ttname"><a href="class_start_game_client_request.html#ab42a8dc933c022e8df41b0c2e199f461">StartGameClientRequest::StartGameClientRequest</a></div><div class="ttdeci">StartGameClientRequest(const std::string &amp;session_id)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00098">event.cpp:98</a></div></div>
+<div class="ttc" id="aclass_start_game_server_response_sucsses_html"><div class="ttname"><a href="class_start_game_server_response_sucsses.html">StartGameServerResponseSucsses</a></div><div class="ttdoc">Added: GameHandler. Handles: NetworkHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00256">event.h:257</a></div></div>
+<div class="ttc" id="aclass_start_game_server_response_sucsses_html_aa4181b191fbf23e5f3eb055634ebdc9a"><div class="ttname"><a href="class_start_game_server_response_sucsses.html#aa4181b191fbf23e5f3eb055634ebdc9a">StartGameServerResponseSucsses::~StartGameServerResponseSucsses</a></div><div class="ttdeci">~StartGameServerResponseSucsses()=default</div></div>
+<div class="ttc" id="aclass_start_game_server_response_sucsses_html_ac38a2cb39b38b4f1c2202ab4e1167b0e"><div class="ttname"><a href="class_start_game_server_response_sucsses.html#ac38a2cb39b38b4f1c2202ab4e1167b0e">StartGameServerResponseSucsses::StartGameServerResponseSucsses</a></div><div class="ttdeci">StartGameServerResponseSucsses(const std::string &amp;session_id, const std::shared_ptr&lt; Avatar &gt;)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00131">event.cpp:131</a></div></div>
+<div class="ttc" id="aclass_start_game_server_response_sucsses_html_add3457b94b69996ae6b994e4928f3d4e"><div class="ttname"><a href="class_start_game_server_response_sucsses.html#add3457b94b69996ae6b994e4928f3d4e">StartGameServerResponseSucsses::GetConstAvatar</a></div><div class="ttdeci">const std::shared_ptr&lt; const Avatar &gt; GetConstAvatar() const</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00138">event.cpp:138</a></div></div>
+<div class="ttc" id="aclass_success_check_log_pas_html"><div class="ttname"><a href="class_success_check_log_pas.html">SuccessCheckLogPas</a></div><div class="ttdoc">Add these events: DatabaseHandler. Handles: NetworkHandler in MVP-version, UserHandler.</div><div class="ttdef"><b>Definition</b> <a href="#l00145">event.h:146</a></div></div>
+<div class="ttc" id="aclass_success_check_log_pas_html_a25f7b7aca164880b83a83ee931db5283"><div class="ttname"><a href="class_success_check_log_pas.html#a25f7b7aca164880b83a83ee931db5283">SuccessCheckLogPas::~SuccessCheckLogPas</a></div><div class="ttdeci">~SuccessCheckLogPas()=default</div></div>
+<div class="ttc" id="aclass_success_check_log_pas_html_a4d0b1775d37cd4a33698d2aba1cc9c09"><div class="ttname"><a href="class_success_check_log_pas.html#a4d0b1775d37cd4a33698d2aba1cc9c09">SuccessCheckLogPas::SuccessCheckLogPas</a></div><div class="ttdeci">SuccessCheckLogPas(const std::string &amp;session_id, std::shared_ptr&lt; const std::string &gt; uuid)</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00051">event.cpp:51</a></div></div>
+<div class="ttc" id="aclass_success_check_log_pas_html_a9375206a2f69afbe1a14b4b4e13baa3e"><div class="ttname"><a href="class_success_check_log_pas.html#a9375206a2f69afbe1a14b4b4e13baa3e">SuccessCheckLogPas::GetUuid</a></div><div class="ttdeci">std::shared_ptr&lt; const std::string &gt; GetUuid()</div><div class="ttdef"><b>Definition</b> <a href="event_8cpp_source.html#l00058">event.cpp:58</a></div></div>
+<div class="ttc" id="aevent_8h_html_a0f4eb46316c4726af4eb49364a67a8c8"><div class="ttname"><a href="event_8h.html#a0f4eb46316c4726af4eb49364a67a8c8">SharedMsg</a></div><div class="ttdeci">std::shared_ptr&lt; ProtoMessage::GameMessage &gt; SharedMsg</div><div class="ttdef"><b>Definition</b> <a href="#l00012">event.h:12</a></div></div>
+<div class="ttc" id="aevent_8h_html_a1a2838dc20b8334df3c32f18f56e8613"><div class="ttname"><a href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613">EventPriority</a></div><div class="ttdeci">EventPriority</div><div class="ttdef"><b>Definition</b> <a href="#l00014">event.h:15</a></div></div>
+<div class="ttc" id="aevent_8h_html_a1a2838dc20b8334df3c32f18f56e8613a35c3ace1970663a16e5c65baa5941b13"><div class="ttname"><a href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613a35c3ace1970663a16e5c65baa5941b13">EventPriority::kNone</a></div><div class="ttdeci">@ kNone</div></div>
+<div class="ttc" id="aevent_8h_html_a1a2838dc20b8334df3c32f18f56e8613a3ce9d817402b59f65fb01ea044bb1ee9"><div class="ttname"><a href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613a3ce9d817402b59f65fb01ea044bb1ee9">EventPriority::kMedium</a></div><div class="ttdeci">@ kMedium</div></div>
+<div class="ttc" id="aevent_8h_html_a1a2838dc20b8334df3c32f18f56e8613a84e433ab4609f1c798e455b2523c2a98"><div class="ttname"><a href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613a84e433ab4609f1c798e455b2523c2a98">EventPriority::kEndGame</a></div><div class="ttdeci">@ kEndGame</div></div>
+<div class="ttc" id="aevent_8h_html_a1a2838dc20b8334df3c32f18f56e8613aa022f15e910eb36278094efb6e808a07"><div class="ttname"><a href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613aa022f15e910eb36278094efb6e808a07">EventPriority::kHigh</a></div><div class="ttdeci">@ kHigh</div></div>
+<div class="ttc" id="aevent_8h_html_a1a2838dc20b8334df3c32f18f56e8613acd8fe42741a3bbc973bbf1d404afeff4"><div class="ttname"><a href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613acd8fe42741a3bbc973bbf1d404afeff4">EventPriority::kLow</a></div><div class="ttdeci">@ kLow</div></div>
+<div class="ttc" id="aevent_8h_html_a1a2838dc20b8334df3c32f18f56e8613ae3587c730cc1aa530fa4ddc9c4204e97"><div class="ttname"><a href="event_8h.html#a1a2838dc20b8334df3c32f18f56e8613ae3587c730cc1aa530fa4ddc9c4204e97">EventPriority::kError</a></div><div class="ttdeci">@ kError</div></div>
+<div class="ttc" id="aevent_8h_html_a57aba5d77747e7e24dfc0ddefa91629b"><div class="ttname"><a href="event_8h.html#a57aba5d77747e7e24dfc0ddefa91629b">ShrdEvent</a></div><div class="ttdeci">std::shared_ptr&lt; Event &gt; ShrdEvent</div><div class="ttdef"><b>Definition</b> <a href="#l00011">event.h:11</a></div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629">EventType</a></div><div class="ttdeci">EventType</div><div class="ttdef"><b>Definition</b> <a href="#l00028">event.h:29</a></div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629a0aecc0adfa4e90597339a8a8441778ba"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629a0aecc0adfa4e90597339a8a8441778ba">EventType::kFirstConnect</a></div><div class="ttdeci">@ kFirstConnect</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629a248c0d18c59730fb232512cf5797423c"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629a248c0d18c59730fb232512cf5797423c">EventType::kStartGameClientRequest</a></div><div class="ttdeci">@ kStartGameClientRequest</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629a374bf9ba57a441a600d65b212cf9d13c"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629a374bf9ba57a441a600d65b212cf9d13c">EventType::kEnd</a></div><div class="ttdeci">@ kEnd</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629a3e9f7058dc7c25fe1c5286a7da7ba767"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629a3e9f7058dc7c25fe1c5286a7da7ba767">EventType::kUsersAvatarListClientRequest</a></div><div class="ttdeci">@ kUsersAvatarListClientRequest</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629a50e515120f9b7e010dd1f6c3d13a7d1a"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629a50e515120f9b7e010dd1f6c3d13a7d1a">EventType::kGetAvatarsData</a></div><div class="ttdeci">@ kGetAvatarsData</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629a53cd1486a2b1d100642e2bda017dc5a6"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629a53cd1486a2b1d100642e2bda017dc5a6">EventType::kStartGameServerResponseSucsses</a></div><div class="ttdeci">@ kStartGameServerResponseSucsses</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629a5db6b6ab6b584b35aee715796431c8d3"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629a5db6b6ab6b584b35aee715796431c8d3">EventType::kSaveGame</a></div><div class="ttdeci">@ kSaveGame</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629a5fc8ee48c0c56b8e0c5e24bc88c400c4"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629a5fc8ee48c0c56b8e0c5e24bc88c400c4">EventType::kAvatarListIsReady</a></div><div class="ttdeci">@ kAvatarListIsReady</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629a8a3b745541ef250c792de692a54af116"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629a8a3b745541ef250c792de692a54af116">EventType::kUserLogPasServerRequest</a></div><div class="ttdeci">@ kUserLogPasServerRequest</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629a8ffcf14f9269e2cdc8f086caed5e14e8"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629a8ffcf14f9269e2cdc8f086caed5e14e8">EventType::kExitGameRequest</a></div><div class="ttdeci">@ kExitGameRequest</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629a91b38dfbdf306af957c0ba22fb5cf436"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629a91b38dfbdf306af957c0ba22fb5cf436">EventType::kExitGameResponse</a></div><div class="ttdeci">@ kExitGameResponse</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629a99078108fbdab303d1febe2a321b4a80"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629a99078108fbdab303d1febe2a321b4a80">EventType::kFailureCheckLogPas</a></div><div class="ttdeci">@ kFailureCheckLogPas</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629ab320da4595b495406a9749bad2e43732"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629ab320da4595b495406a9749bad2e43732">EventType::kAvatarsDataReady</a></div><div class="ttdeci">@ kAvatarsDataReady</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629abc7535d303037ff917effe7d6cb333a7"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629abc7535d303037ff917effe7d6cb333a7">EventType::kAddItemInInventory</a></div><div class="ttdeci">@ kAddItemInInventory</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629abf55fc79f036ce4fea8eeb35a8a13b88"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629abf55fc79f036ce4fea8eeb35a8a13b88">EventType::kSuccessCheckLogPas</a></div><div class="ttdeci">@ kSuccessCheckLogPas</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629abf5b639c245ebb59f065e7418413f0db"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629abf5b639c245ebb59f065e7418413f0db">EventType::kBroadcastMessage</a></div><div class="ttdeci">@ kBroadcastMessage</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629aeaff67467eed443cd69d52fe5ca8d152"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629aeaff67467eed443cd69d52fe5ca8d152">EventType::kDisconnectSession</a></div><div class="ttdeci">@ kDisconnectSession</div></div>
+<div class="ttc" id="aevent_8h_html_a921bea877914e2bf0856fa61313d2629aebae12d7c937b743dcc14615c89d15af"><div class="ttname"><a href="event_8h.html#a921bea877914e2bf0856fa61313d2629aebae12d7c937b743dcc14615c89d15af">EventType::kUserLogPasClientResponse</a></div><div class="ttdeci">@ kUserLogPasClientResponse</div></div>
+<div class="ttc" id="agame__elements_8h_html"><div class="ttname"><a href="game__elements_8h.html">game_elements.h</a></div></div>
+<div class="ttc" id="agame__elements_8h_html_a40760495e5ae271c586f8c9f5e758868"><div class="ttname"><a href="game__elements_8h.html#a40760495e5ae271c586f8c9f5e758868">ItemType</a></div><div class="ttdeci">ItemType</div><div class="ttdef"><b>Definition</b> <a href="game__elements_8h_source.html#l00008">game_elements.h:9</a></div></div>
+<div class="ttc" id="asettings_8h_html"><div class="ttname"><a href="settings_8h.html">settings.h</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b.html">source</a></li><li class="navelem"><a class="el" href="dir_25f19b0ae85c078e0a95db0b0e9a410f.html">server</a></li><li class="navelem"><a class="el" href="event_8h.html">event.h</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.11.0 </li>
+  </ul>
+</div>
+</body>
+</html>

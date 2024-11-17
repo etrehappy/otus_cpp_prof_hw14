@@ -1,0 +1,39 @@
+<map id="C:/Users/etreh/Documents/Programming/Otus/C++_Developer/Professional/Project/otus_cpp_prof_hw14/source/server/event_dispatcher.h" name="C:/Users/etreh/Documents/Programming/Otus/C++_Developer/Professional/Project/otus_cpp_prof_hw14/source/server/event_dispatcher.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="773,5,1004,96"/>
+<area shape="rect" id="Node000002" href="$server__tests_8cpp.html" title=" " alt="" coords="5,144,236,235"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="758,67,522,97,387,119,254,147,237,151,235,146,253,141,386,114,521,91,757,62"/>
+<area shape="rect" id="Node000003" href="$server_2db__handler_8h.html" title=" " alt="" coords="368,152,617,227"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="759,99,600,154,598,149,758,94"/>
+<area shape="rect" id="Node000005" href="$server_2main_8h.html" title=" " alt="" coords="723,429,953,504"/>
+<area shape="poly" id="edge13_Node000001_Node000005" title=" " alt="" coords="758,61,644,70,526,87,471,98,423,112,384,128,357,146,343,161,335,176,329,206,329,241,328,283,317,332,317,351,328,372,353,392,391,409,438,423,492,434,611,450,723,459,722,464,610,455,492,439,437,428,389,413,350,396,324,375,312,352,312,331,323,282,324,241,323,206,330,174,339,158,353,142,382,123,421,107,470,93,525,82,644,65,758,55"/>
+<area shape="rect" id="Node000007" href="$event__dispatcher_8cpp.html" title=" " alt="" coords="1460,144,1690,235"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="1020,65,1222,95,1336,116,1448,141,1460,145,1459,150,1447,147,1335,121,1221,100,1019,70"/>
+<area shape="rect" id="Node000008" href="$game__handler_8h.html" title=" " alt="" coords="1205,144,1436,235"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="1020,89,1188,141,1206,147,1204,152,1186,147,1018,94"/>
+<area shape="rect" id="Node000010" href="$session_8h.html" title=" " alt="" coords="1054,291,1286,365"/>
+<area shape="poly" id="edge18_Node000001_Node000010" title=" " alt="" coords="1020,68,1054,80,1088,96,1119,116,1145,142,1165,178,1175,217,1179,256,1177,290,1172,290,1173,256,1170,218,1160,180,1141,146,1115,121,1085,100,1052,85,1018,73"/>
+<area shape="rect" id="Node000013" href="$server_2network__handler_8h.html" title=" " alt="" coords="901,144,1132,235"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="943,106,976,142,973,145,939,110"/>
+<area shape="rect" id="Node000014" href="$user__handler_8h.html" title=" " alt="" coords="647,144,877,235"/>
+<area shape="poly" id="edge19_Node000001_Node000014" title=" " alt="" coords="839,110,805,145,801,142,835,106"/>
+<area shape="rect" id="Node000004" href="$server_2db__handler_8cpp.html" title=" " alt="" coords="361,291,624,365"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="495,242,495,290,490,290,490,242"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="394,238,370,259,351,284,339,308,334,330,337,350,351,372,374,391,409,407,454,421,505,432,616,448,723,457,722,463,616,453,504,437,452,426,407,412,371,395,346,375,332,352,329,330,334,307,346,281,366,255,391,233"/>
+<area shape="rect" id="Node000006" href="$server_2main_8cpp.html" title=" " alt="" coords="723,560,953,635"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="840,520,840,560,835,560,835,520"/>
+<area shape="rect" id="Node000009" href="$game__handler_8cpp.html" title=" " alt="" coords="1309,283,1540,373"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="1366,245,1392,280,1388,284,1362,249"/>
+<area shape="poly" id="edge9_Node000008_Node000010" title=" " alt="" coords="1262,247,1212,292,1208,288,1258,243"/>
+<area shape="poly" id="edge10_Node000010_Node000005" title=" " alt="" coords="1068,374,928,431,926,426,1066,369"/>
+<area shape="rect" id="Node000011" href="$server_2network__handler_8cpp.html" title=" " alt="" coords="977,421,1208,512"/>
+<area shape="poly" id="edge11_Node000010_Node000011" title=" " alt="" coords="1144,380,1120,422,1115,420,1139,378"/>
+<area shape="rect" id="Node000012" href="$session_8cpp.html" title=" " alt="" coords="1231,429,1476,504"/>
+<area shape="poly" id="edge12_Node000010_Node000012" title=" " alt="" coords="1233,373,1306,427,1303,431,1230,377"/>
+<area shape="poly" id="edge15_Node000013_Node000005" title=" " alt="" coords="990,250,956,311,916,375,873,431,868,427,912,372,951,308,985,247"/>
+<area shape="poly" id="edge17_Node000013_Node000010" title=" " alt="" coords="1080,243,1130,288,1127,292,1076,247"/>
+<area shape="poly" id="edge16_Node000013_Node000011" title=" " alt="" coords="1022,250,1029,310,1044,372,1066,420,1061,422,1039,374,1024,311,1017,250"/>
+<area shape="poly" id="edge20_Node000014_Node000005" title=" " alt="" coords="861,243,879,261,892,281,899,300,902,320,897,360,883,398,866,430,861,427,879,395,892,359,897,320,894,302,887,284,874,264,858,247"/>
+<area shape="poly" id="edge21_Node000014_Node000010" title=" " alt="" coords="893,233,1058,288,1056,293,891,238"/>
+<area shape="rect" id="Node000015" href="$user__handler_8cpp.html" title=" " alt="" coords="648,283,878,373"/>
+<area shape="poly" id="edge22_Node000014_Node000015" title=" " alt="" coords="765,250,765,282,760,282,760,250"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="EventQueueTest" name="EventQueueTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="52,96,170,123"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,99,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="71,44,104,94,100,97,67,47"/>
+<area shape="rect" id="Node000003" href="$class_event_queue.html" title=" " alt="" coords="123,5,216,32"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,47,121,97,117,94,150,44"/>
+</map>

@@ -1,0 +1,23 @@
+<map id="C:/Users/etreh/Documents/Programming/Otus/C++_Developer/Professional/Project/otus_cpp_prof_hw14/source/client/i_inputdata.h" name="C:/Users/etreh/Documents/Programming/Otus/C++_Developer/Professional/Project/otus_cpp_prof_hw14/source/client/i_inputdata.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="373,5,617,80"/>
+<area shape="rect" id="Node000002" href="$controller_8h.html" title=" " alt="" coords="276,259,511,333"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="469,95,453,129,427,198,407,259,402,257,422,196,448,127,465,93"/>
+<area shape="rect" id="Node000007" href="$game__logic_8h.html" title=" " alt="" coords="463,128,710,203"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="534,91,561,126,557,129,530,94"/>
+<area shape="rect" id="Node000003" href="$controller_8cpp.html" title=" " alt="" coords="5,397,254,472"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="310,343,201,399,199,395,308,339"/>
+<area shape="rect" id="Node000004" href="$client_2main_8h.html" title=" " alt="" coords="533,397,763,472"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="476,339,581,395,579,399,474,343"/>
+<area shape="rect" id="Node000006" href="$client__tests_8cpp.html" title=" " alt="" coords="278,389,509,480"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="396,349,396,389,391,389,391,349"/>
+<area shape="rect" id="Node000005" href="$client_2main_8cpp.html" title=" " alt="" coords="533,528,763,603"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="651,488,651,528,646,528,646,488"/>
+<area shape="poly" id="edge7_Node000007_Node000002" title=" " alt="" coords="521,214,450,260,447,256,518,209"/>
+<area shape="poly" id="edge11_Node000007_Node000004" title=" " alt="" coords="600,217,627,341,641,396,636,397,622,342,595,218"/>
+<area shape="poly" id="edge12_Node000007_Node000006" title=" " alt="" coords="579,219,559,281,544,313,525,343,501,369,474,391,471,387,497,365,521,340,539,311,554,279,574,217"/>
+<area shape="rect" id="Node000008" href="$game__logic_8cpp.html" title=" " alt="" coords="788,389,1018,480"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="726,172,768,182,809,198,847,220,880,249,899,281,909,318,913,355,912,389,907,389,908,355,904,319,894,283,875,252,844,224,807,203,767,188,725,177"/>
+<area shape="rect" id="Node000009" href="$game__logic_8ipp.html" title=" " alt="" coords="636,251,866,341"/>
+<area shape="poly" id="edge9_Node000007_Node000009" title=" " alt="" coords="647,210,695,248,692,252,644,214"/>
+<area shape="poly" id="edge10_Node000009_Node000008" title=" " alt="" coords="814,350,855,387,851,391,810,354"/>
+</map>

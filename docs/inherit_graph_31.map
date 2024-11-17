@@ -1,0 +1,20 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,95,137,137"/>
+<area shape="rect" id="Node000001" href="$class_client_session.html" title=" " alt="" coords="196,5,298,32"/>
+<area shape="poly" id="edge21_Node000000_Node000001" title=" " alt="" coords="114,83,183,42,208,30,210,35,186,46,117,88"/>
+<area shape="rect" id="Node000002" href="$class_database_handler.html" title="There is one DatabaseHandler for all clients in the MVP version so the EventDispatcher uses the kData..." alt="" coords="186,56,308,83"/>
+<area shape="poly" id="edge22_Node000000_Node000002" title=" " alt="" coords="151,92,194,81,195,86,152,97"/>
+<area shape="rect" id="Node000004" href="$class_game_handler.html" title=" " alt="" coords="197,107,298,133"/>
+<area shape="poly" id="edge23_Node000000_Node000004" title=" " alt="" coords="152,115,197,116,196,122,152,121"/>
+<area shape="rect" id="Node000005" href="$class_network_handler.html" title=" " alt="" coords="190,157,305,184"/>
+<area shape="poly" id="edge24_Node000000_Node000005" title=" " alt="" coords="152,138,203,154,201,159,151,143"/>
+<area shape="rect" id="Node000007" href="$class_user_handler.html" title="It can be used to handle a connection status of the user. But in the MVP&#45;version this class hasn&#39;t a ..." alt="" coords="200,208,294,235"/>
+<area shape="poly" id="edge25_Node000000_Node000007" title=" " alt="" coords="133,143,138,147,162,171,186,194,207,205,205,210,183,198,159,175,135,151,130,148"/>
+<area shape="rect" id="Node000003" href="$class_event_handler.html" title=" " alt="" coords="21,161,121,188"/>
+<area shape="poly" id="edge26_Node000003_Node000002" title=" " alt="" coords="128,152,135,147,150,134,159,121,168,107,183,93,204,81,206,85,186,97,172,110,163,124,154,137,138,151,131,156"/>
+<area shape="poly" id="edge27_Node000003_Node000004" title=" " alt="" coords="130,154,201,131,203,136,131,159"/>
+<area shape="poly" id="edge28_Node000003_Node000005" title=" " alt="" coords="137,171,189,169,189,175,137,176"/>
+<area shape="poly" id="edge30_Node000003_Node000007" title=" " alt="" coords="137,189,200,206,199,211,136,194"/>
+<area shape="rect" id="Node000006" href="$class_test_event_handler.html" title=" " alt="" coords="185,259,310,285"/>
+<area shape="poly" id="edge29_Node000003_Node000006" title=" " alt="" coords="106,195,186,244,210,256,208,260,183,249,103,199"/>
+</map>

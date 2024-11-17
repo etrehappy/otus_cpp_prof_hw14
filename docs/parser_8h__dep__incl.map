@@ -1,0 +1,24 @@
+<map id="C:/Users/etreh/Documents/Programming/Otus/C++_Developer/Professional/Project/otus_cpp_prof_hw14/source/client/parser.h" name="C:/Users/etreh/Documents/Programming/Otus/C++_Developer/Professional/Project/otus_cpp_prof_hw14/source/client/parser.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="616,5,846,80"/>
+<area shape="rect" id="Node000002" href="$game__logic_8h.html" title=" " alt="" coords="476,128,723,203"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="682,93,641,130,637,126,678,89"/>
+<area shape="rect" id="Node000010" href="$parser_8cpp.html" title=" " alt="" coords="748,128,979,203"/>
+<area shape="poly" id="edge12_Node000001_Node000010" title=" " alt="" coords="784,89,825,126,821,130,781,93"/>
+<area shape="rect" id="Node000003" href="$controller_8h.html" title=" " alt="" coords="297,259,531,333"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="536,214,468,260,465,256,533,209"/>
+<area shape="rect" id="Node000005" href="$client_2main_8h.html" title=" " alt="" coords="5,397,236,472"/>
+<area shape="poly" id="edge10_Node000002_Node000005" title=" " alt="" coords="461,188,371,213,327,231,286,253,242,285,204,324,146,398,142,395,200,320,239,281,283,248,325,226,370,208,459,183"/>
+<area shape="rect" id="Node000007" href="$client__tests_8cpp.html" title=" " alt="" coords="533,389,764,480"/>
+<area shape="poly" id="edge11_Node000002_Node000007" title=" " alt="" coords="608,218,627,341,638,388,633,390,622,342,602,219"/>
+<area shape="rect" id="Node000008" href="$game__logic_8cpp.html" title=" " alt="" coords="788,389,1018,480"/>
+<area shape="poly" id="edge7_Node000002_Node000008" title=" " alt="" coords="739,203,832,230,880,249,899,281,910,318,913,355,912,389,907,389,908,356,904,319,894,284,876,253,830,235,737,208"/>
+<area shape="rect" id="Node000009" href="$game__logic_8ipp.html" title=" " alt="" coords="636,251,866,341"/>
+<area shape="poly" id="edge8_Node000002_Node000009" title=" " alt="" coords="655,211,700,248,696,252,652,215"/>
+<area shape="rect" id="Node000004" href="$controller_8cpp.html" title=" " alt="" coords="260,397,509,472"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="405,349,395,397,390,396,400,348"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="322,343,200,399,198,394,320,338"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="491,339,573,386,570,391,488,344"/>
+<area shape="rect" id="Node000006" href="$client_2main_8cpp.html" title=" " alt="" coords="5,528,236,603"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="123,488,123,528,118,528,118,488"/>
+<area shape="poly" id="edge9_Node000009_Node000008" title=" " alt="" coords="814,350,855,387,852,391,810,354"/>
+</map>
