@@ -45,4 +45,10 @@ endif ()
 
 set_common_target_properties(${EXE_NAME})
 
+
+target_link_libraries(${EXE_NAME} PRIVATE
+	GTest::gtest GTest::gtest_main 
+	GTest::gmock GTest::gmock_main 
+) 
+
 add_custom_command(TARGET tests POST_BUILD COMMAND ${CMAKE_COMMAND} -E copy_directory ${CMAKE_SOURCE_DIR}/client_files/files ${CMAKE_BINARY_DIR}/gtests/${CMAKE_CFG_INTDIR}/files )

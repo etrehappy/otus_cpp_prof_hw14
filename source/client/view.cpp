@@ -224,7 +224,8 @@ try
 {
     std::lock_guard<std::mutex> g{cout_mutex_};
 
-    view_out_ << "[Чат мир]::" << name << ": " << text << kNewStr << kBracket;
+    view_out_ << "[Чат мир]::" << name << ": " << text << kNewStr << std::endl;
+    view_out_ << kBracket;
 }
 catch (std::exception& e)
 {

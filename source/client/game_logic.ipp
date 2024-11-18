@@ -104,6 +104,7 @@ try
     ProtoPtr message = std::make_unique<ProtoMsg>();
 
     message->set_command(ProtoMessage::CommandType::kSendToCommonChat);
+    message->mutable_chat_data()->set_sender_avatar_name(current_avatar_->GetName());
     message->mutable_chat_data()->set_text_message(text_message);
 
     return message;

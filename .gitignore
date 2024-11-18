@@ -1,2 +1,4 @@
 build/
 source/CMakeSettings.json
+build_linux/
+build_windows/

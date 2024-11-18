@@ -120,7 +120,7 @@ try
     message.set_command(ProtoMessage::CommandType::kGetCommonMessage);
 
     const std::string& text = event->GetEventMessage()->chat_data().text_message();
-    const std::string& sender = current_avatar_->GetName();
+    const std::string& sender = event->GetEventMessage()->chat_data().sender_avatar_name();
     message.mutable_chat_data()->set_text_message(text);
     message.mutable_chat_data()->set_sender_avatar_name(sender);
 

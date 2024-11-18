@@ -109,13 +109,6 @@ function(set_common_target_properties target)
         SQLiteCpp
     )
 
-    if (BUILD_TESTS) 
-        target_link_libraries(${target} PRIVATE 
-            gtest gtest_main 
-            gmock gmock_main 
-        ) 
-    endif()
-
     target_compile_options(${target} PRIVATE
         $<$<CXX_COMPILER_ID:MSVC>:/W4> #/WX 
         $<$<NOT:$<CXX_COMPILER_ID:MSVC>>:-Wall -Wextra -Wpedantic>
@@ -125,7 +118,6 @@ function(set_common_target_properties target)
         CXX_STANDARD_REQUIRED ON
     )    
 endfunction()
-
 
 add_subdirectory(client)
 add_subdirectory(server)
