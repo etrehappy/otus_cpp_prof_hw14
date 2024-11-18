@@ -4,25 +4,25 @@ on:
   # push:
   #   branches: [ "main" ]
 jobs:      
-  # create_release:
-  #   name: Create release
-  #   runs-on: ubuntu-latest
-  #   outputs:
-  #     upload_url: ${{ steps.create_release.outputs.upload_url }}
-  #   steps:
-  #     - name: Create release
-  #       id: create_release
-  #       uses: actions/create-release@v1
-  #       env:
-  #         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  #       with:
-  #         tag_name: ${{ github.run_number }}
-  #         release_name: Release ${{ github.run_number }}
-  #         draft: false
-  #         prerelease: false
+  create_release:
+    name: Create release
+    runs-on: ubuntu-latest
+    outputs:
+      upload_url: ${{ steps.create_release.outputs.upload_url }}
+    steps:
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
+          draft: false
+          prerelease: false
           
   build:
-    # needs: create_release
+    needs: create_release
     runs-on: ${{ matrix.os }}
     strategy:
       # Set fail-fast to false to ensure that feedback is delivered for all matrix combinations. Consider changing this to true when your workflow is stable.
@@ -96,15 +96,15 @@ jobs:
           fi
         fi
 
-    # - name: Configure CMake (Ubuntu & macOS)
-    #   if: matrix.os != 'windows-latest'
-    #   run: |
-    #     cmake -B ${{ steps.strings.outputs.build-output-dir }} \
-    #           -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }} \
-    #           -DCMAKE_C_COMPILER=${{ matrix.c_compiler }} \
-    #           -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
-    #           -DCMAKE_TOOLCHAIN_FILE=$HOME/vcpkg/scripts/buildsystems/vcpkg.cmake \
-    #           -S ${GITHUB_WORKSPACE}/source
+    - name: Configure CMake (Ubuntu & macOS)
+      if: matrix.os != 'windows-latest'
+      run: |
+        cmake -B ${{ steps.strings.outputs.build-output-dir }} \
+              -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }} \
+              -DCMAKE_C_COMPILER=${{ matrix.c_compiler }} \
+              -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} \
+              -DCMAKE_TOOLCHAIN_FILE=$HOME/vcpkg/scripts/buildsystems/vcpkg.cmake \
+              -S ${GITHUB_WORKSPACE}/source
 
 
     # Windows
@@ -149,84 +149,84 @@ jobs:
           echo "vcpkg is cached"
         }
         
-    # - name: Configure CMake (Windows)
-    #   if: matrix.os == 'windows-latest'
-    #   run: |
-    #     cmake -B ${{ steps.strings.outputs.build-output-dir }} `
-    #           -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }} `
-    #           -DCMAKE_C_COMPILER=${{ matrix.c_compiler }} `
-    #           -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} `
-    #           -DCMAKE_TOOLCHAIN_FILE=C:\Users\runneradmin\vcpkg\scripts\buildsystems\vcpkg.cmake `
-    #           -S ${{ github.workspace }}\source
-    # ###########################   Build   #########################################################    
+    - name: Configure CMake (Windows)
+      if: matrix.os == 'windows-latest'
+      run: |
+        cmake -B ${{ steps.strings.outputs.build-output-dir }} `
+              -DCMAKE_CXX_COMPILER=${{ matrix.cpp_compiler }} `
+              -DCMAKE_C_COMPILER=${{ matrix.c_compiler }} `
+              -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} `
+              -DCMAKE_TOOLCHAIN_FILE=C:\Users\runneradmin\vcpkg\scripts\buildsystems\vcpkg.cmake `
+              -S ${{ github.workspace }}\source
+    ###########################   Build   #########################################################    
       
-    # - name: Build
-    #   # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
-    #   run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
+    - name: Build
+      # Build your program with the given configuration. Note that --config is needed because the default Windows generator is a multi-config generator (Visual Studio generator).
+      run: cmake --build ${{ steps.strings.outputs.build-output-dir }} --config ${{ matrix.build_type }}
 
-    # ###########################   Upload Release   #########################################################
-    # - name: Prepare directories and copy files (Windows)
-    #   if: matrix.os == 'windows-latest'
-    #   shell: pwsh
-    #   run: |
-    #     $buildOutputDir = "${{ steps.strings.outputs.build-output-dir }}"
-    #     $releaseDir = Join-Path -Path $buildOutputDir -ChildPath 'release'
-    #     $clientDir = Join-Path -Path $releaseDir -ChildPath 'client'
-    #     $serverDir = Join-Path -Path $releaseDir -ChildPath 'server'
+    ###########################   Upload Release   #########################################################
+    - name: Prepare directories and copy files (Windows)
+      if: matrix.os == 'windows-latest'
+      shell: pwsh
+      run: |
+        $buildOutputDir = "${{ steps.strings.outputs.build-output-dir }}"
+        $releaseDir = Join-Path -Path $buildOutputDir -ChildPath 'release'
+        $clientDir = Join-Path -Path $releaseDir -ChildPath 'client'
+        $serverDir = Join-Path -Path $releaseDir -ChildPath 'server'
         
-    #     # Создание директорий
-    #     New-Item -ItemType Directory -Force -Path $clientDir
-    #     New-Item -ItemType Directory -Force -Path $serverDir
+        # Создание директорий
+        New-Item -ItemType Directory -Force -Path $clientDir
+        New-Item -ItemType Directory -Force -Path $serverDir
         
-    #     # Копирование файлов и директорий
-    #     Copy-Item -Recurse -Force -Path (Join-Path -Path $buildOutputDir -ChildPath 'client\Release\*') -Destination $clientDir
-    #     Copy-Item -Recurse -Force -Path (Join-Path -Path $buildOutputDir -ChildPath 'server\Release\*') -Destination $serverDir
+        # Копирование файлов и директорий
+        Copy-Item -Recurse -Force -Path (Join-Path -Path $buildOutputDir -ChildPath 'client\Release\*') -Destination $clientDir
+        Copy-Item -Recurse -Force -Path (Join-Path -Path $buildOutputDir -ChildPath 'server\Release\*') -Destination $serverDir
     
-    # - name: Archive client and server files (Windows)
-    #   if: matrix.os == 'windows-latest'
-    #   shell: pwsh
-    #   run: |
-    #     $buildOutputDir = "${{ steps.strings.outputs.build-output-dir }}"
-    #     $releaseDir = Join-Path -Path $buildOutputDir -ChildPath 'release'
-    #     $archivePath = Join-Path -Path $buildOutputDir -ChildPath 'game.zip'
+    - name: Archive client and server files (Windows)
+      if: matrix.os == 'windows-latest'
+      shell: pwsh
+      run: |
+        $buildOutputDir = "${{ steps.strings.outputs.build-output-dir }}"
+        $releaseDir = Join-Path -Path $buildOutputDir -ChildPath 'release'
+        $archivePath = Join-Path -Path $buildOutputDir -ChildPath 'game.zip'
         
-    #     Compress-Archive -Path $releaseDir\client, $releaseDir\server -DestinationPath $archivePath -Force
+        Compress-Archive -Path $releaseDir\client, $releaseDir\server -DestinationPath $archivePath -Force
 
-    # - name: Prepare directories for archiving (Ubuntu & macOS)
-    #   if: matrix.os != 'windows-latest'
-    #   run: |
-    #     mkdir -p ${{ steps.strings.outputs.build-output-dir }}/release/client
-    #     mkdir -p ${{ steps.strings.outputs.build-output-dir }}/release/server
-    #     cp -r ${{ steps.strings.outputs.build-output-dir }}/client/client ${{ steps.strings.outputs.build-output-dir }}/release/client/
-    #     cp -r ${{ steps.strings.outputs.build-output-dir }}/client/files ${{ steps.strings.outputs.build-output-dir }}/release/client/
-    #     cp -r ${{ steps.strings.outputs.build-output-dir }}/server/server ${{ steps.strings.outputs.build-output-dir }}/release/server/
+    - name: Prepare directories for archiving (Ubuntu & macOS)
+      if: matrix.os != 'windows-latest'
+      run: |
+        mkdir -p ${{ steps.strings.outputs.build-output-dir }}/release/client
+        mkdir -p ${{ steps.strings.outputs.build-output-dir }}/release/server
+        cp -r ${{ steps.strings.outputs.build-output-dir }}/client/client ${{ steps.strings.outputs.build-output-dir }}/release/client/
+        cp -r ${{ steps.strings.outputs.build-output-dir }}/client/files ${{ steps.strings.outputs.build-output-dir }}/release/client/
+        cp -r ${{ steps.strings.outputs.build-output-dir }}/server/server ${{ steps.strings.outputs.build-output-dir }}/release/server/
         
-    # - name: Archive client and server files (Ubuntu & macOS)
-    #   if: matrix.os != 'windows-latest'
-    #   run: |
-    #     cd ${{ steps.strings.outputs.build-output-dir }}/release
-    #     tar -czf game.tar.gz client server
+    - name: Archive client and server files (Ubuntu & macOS)
+      if: matrix.os != 'windows-latest'
+      run: |
+        cd ${{ steps.strings.outputs.build-output-dir }}/release
+        tar -czf game.tar.gz client server
 
-    # - name: Upload Release Asset (Ubuntu & macOS)
-    #   if: ${{ success() && matrix.os != 'windows-latest' }}    
-    #   id: upload-release-asset-client
-    #   uses: actions/upload-release-asset@v1
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #   with:
-    #     upload_url: ${{ needs.create_release.outputs.upload_url }}
-    #     asset_path: ${{ steps.strings.outputs.build-output-dir }}/release/game.tar.gz
-    #     asset_name: game-${{ matrix.os }}-0.0.${{ github.run_number }}.tar.gz
-    #     asset_content_type: application/gzip
+    - name: Upload Release Asset (Ubuntu & macOS)
+      if: ${{ success() && matrix.os != 'windows-latest' }}    
+      id: upload-release-asset-client
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.create_release.outputs.upload_url }}
+        asset_path: ${{ steps.strings.outputs.build-output-dir }}/release/game.tar.gz
+        asset_name: game-${{ matrix.os }}-0.0.${{ github.run_number }}.tar.gz
+        asset_content_type: application/gzip
 
-    # - name: Upload Release Asset (Windows)
-    #   if: ${{ success() && matrix.os == 'windows-latest' }}
-    #   id: upload-release-asset-windows
-    #   uses: actions/upload-release-asset@v1
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #   with:
-    #     upload_url: ${{ needs.create_release.outputs.upload_url }}
-    #     asset_path: ${{ steps.strings.outputs.build-output-dir }}\game.zip
-    #     asset_name: game-${{ matrix.os }}-0.0.${{ github.run_number }}.zip
-    #     asset_content_type: application/zip
+    - name: Upload Release Asset (Windows)
+      if: ${{ success() && matrix.os == 'windows-latest' }}
+      id: upload-release-asset-windows
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ needs.create_release.outputs.upload_url }}
+        asset_path: ${{ steps.strings.outputs.build-output-dir }}\game.zip
+        asset_name: game-${{ matrix.os }}-0.0.${{ github.run_number }}.zip
+        asset_content_type: application/zip
