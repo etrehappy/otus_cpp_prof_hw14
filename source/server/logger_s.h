@@ -32,7 +32,15 @@ namespace logger_s
     void ErrorDynamicPointerCast(EventType);
     void ErrorSqlExecuteStep(EventType);
     void ErrorDatabaseCreateDir(const std::string&);
-    
+
+#ifdef _WIN32    
+    #pragma warning(push) 
+    #pragma warning(disable : 4100) 
+#else
+    #pragma GCC diagnostic push 
+    #pragma GCC diagnostic ignored "-Wunused-variable"
+#endif 
+
     static const char* kInfoServerStart = "Сервер запущен и ожидает подключения...";
     static const char* kInfoClientConnect = "Клиент подключен: ";
     static const char* kInfoAuthenticateAttempt = "Попытка аутентификации пользователя: ";
@@ -51,5 +59,11 @@ namespace logger_s
     static const char* kErrorDatabaseCreateDir = "Ошибка при создании директории: ";
 
     static const char* kClientDisconnect = "Клиент отключен: ";
+
+#ifdef _WIN32    
+    #pragma warning(pop)
+#else
+    #pragma GCC diagnostic pop
+#endif
 
 } /*logger_s*/

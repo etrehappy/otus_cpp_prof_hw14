@@ -2,6 +2,14 @@
 
 #include <cstdint>
 
+#ifdef _WIN32    
+    #pragma warning(push) 
+    #pragma warning(disable : 4100) 
+#else
+    #pragma GCC diagnostic push 
+    #pragma GCC diagnostic ignored "-Wunused-variable"
+#endif 
+
 namespace text_v
 {
 	static const char* kNewStr{"\n"};
@@ -78,3 +86,9 @@ namespace text_main_menu
 	static const char* kSaveAndExit{"Выход с сохранением"};
 
 }/* text_main_menu */
+
+#ifdef _WIN32    
+    #pragma warning(pop)
+#else
+    #pragma GCC diagnostic pop
+#endif

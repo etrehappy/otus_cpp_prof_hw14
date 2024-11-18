@@ -1,6 +1,5 @@
 #include "location.h"
 #include "location.ipp"
-#include "../client/logger_c.h"
 
 Location::Location(int id, std::string s_name, std::string description, int x
         , int y, bool is_safe_zone, std::map<NpcName, Npc>&& npc_container)
@@ -34,8 +33,6 @@ bool Location::IsSafeZone() const
 
 void Location::InitPositions(const Avatar& current_avatar)
 {
-try
-{
     std::pair<int32_t, int32_t> avatar_pos = current_avatar.GetPosition();
 
     positions_[map_symbols::kPlayer] = {avatar_pos.first, avatar_pos.second};
@@ -52,17 +49,9 @@ try
     default:
         break;
     }
-}
-catch (const std::exception& e)
-{
-    MVP_LOG_EXEPTION(e)
-}    
-
 } /* InitPositions */ 
 
 void Location::UpdateSymbolsOnMap(const Avatar& current_avatar)
-{
-try
 {
     std::pair<int32_t, int32_t> avatar_pos = current_avatar.GetPosition();
     positions_[map_symbols::kPlayer] = {avatar_pos.first, avatar_pos.second};
@@ -71,11 +60,6 @@ try
     {
         location_map_[pos.second][pos.first] = symbol;
     }
-}
-catch (std::exception& e)
-{
-    MVP_LOG_EXEPTION(e)
-}
 } /* UpdateSymbolsOnMap */
 
 const std::vector<std::string>& Location::GetMap() const
@@ -95,10 +79,8 @@ void Location::ClearPosOnMap(uint32_t x, uint32_t y)
 
 void Location::CreateMap()
 {
-try
-{
     location_map_ = std::move(
-        std::vector<std::string>(height_, std::string(width_, map_symbols::kEmpty)) );
+    std::vector<std::string>(height_, std::string(width_, map_symbols::kEmpty)) );
 
     /* Create Walls */
     for (int i = 0; i < width_; ++i)
@@ -112,9 +94,4 @@ try
         location_map_[i][0] = map_symbols::kWall;
         location_map_[i][width_ - 1] = map_symbols::kWall;
     }
-}
-catch (const std::exception& e)
-{
-    MVP_LOG_EXEPTION(e)
-} 
 } /* CreateMap */

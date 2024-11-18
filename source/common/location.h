@@ -9,6 +9,14 @@
 
 namespace map_symbols
 {
+#ifdef _WIN32    
+    #pragma warning(push) 
+    #pragma warning(disable : 4100) 
+#else
+    #pragma GCC diagnostic push 
+    #pragma GCC diagnostic ignored "-Wunused-variable"
+#endif 
+
     static const char kWall{'#'};
     static const char kPlayer{'@'};
     static const char kEmpty{' '};
@@ -17,6 +25,11 @@ namespace map_symbols
     static const char kNpcLora{'L'};
     static const char kNpcAdrik{'A'};
 
+#ifdef _WIN32    
+    #pragma warning(pop)
+#else
+    #pragma GCC diagnostic pop
+#endif
 }/* map_symbols */
 
 /*!

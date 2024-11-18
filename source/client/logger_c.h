@@ -31,6 +31,15 @@ namespace logger_c
 
 namespace logger_c
 {
+
+#ifdef _WIN32    
+    #pragma warning(push) 
+    #pragma warning(disable : 4100) 
+#else
+    #pragma GCC diagnostic push 
+    #pragma GCC diagnostic ignored "-Wunused-variable"
+#endif 
+
     static const char* kInfoConnect = "Клиент подключен к серверу";
     
     static const char* kErrorFatal = "Неизвестная ошибка";
@@ -41,5 +50,11 @@ namespace logger_c
     static const char* kErrorSerializeToString = "Ошибка сериализации при отправке";
     static const char* kErrorSend = "Ошибка при отправке. Сообщение не отправлено: ";
     static const char* kErrorLocatinReadDb = "Ошибка при чтении локации.";
+
+#ifdef _WIN32    
+    #pragma warning(pop)
+#else
+    #pragma GCC diagnostic pop
+#endif
 
 }//logger_c

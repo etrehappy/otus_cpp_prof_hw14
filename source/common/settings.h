@@ -2,6 +2,14 @@
 
 #include <filesystem>
 
+#ifdef _WIN32    
+    #pragma warning(push) 
+    #pragma warning(disable : 4100) 
+#else
+    #pragma GCC diagnostic push 
+    #pragma GCC diagnostic ignored "-Wunused-variable"
+#endif 
+
 namespace settings
 {
 
@@ -40,3 +48,9 @@ namespace server
 } /* namespace settings::server */ 
 
 } /* namespace settings */
+
+#ifdef _WIN32    
+    #pragma warning(pop)
+#else
+    #pragma GCC diagnostic pop
+#endif
